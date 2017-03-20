@@ -24,6 +24,20 @@
       "icon": "/github.png",
       "description": "Source code version control",
       "backing": "#CCC"
+    },
+    {
+      "name": "RHUL College Web Space",
+      "url": "http://personal.rhul.ac.uk/zcva/821/",
+      "icon": "https://www.royalholloway.ac.uk/iquad/documents/other/logos/logo-large-london.jpg",
+      "description": "Web space provided by Royal Holloway",
+      "backing": "#202A30"
+    },
+    {
+      "name": "RHUL Department Web Space",
+      "url": "http://wwwdev.cs.rhul.ac.uk/zcva821/",
+      "icon": "https://www.royalholloway.ac.uk/iquad/documents/other/logos/logo-large-london.jpg",
+      "description": "Web space provided by the CS Department",
+      "backing": "#202A30"
     }
   ],
   "Social": [
@@ -41,5 +55,6 @@
       "description": "Messaging",
       "backing": "#CCC"
     }
+    "http://personal.rhul.ac.uk/zcva/821/"
   ]
 }
