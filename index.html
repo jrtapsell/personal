@@ -94,10 +94,15 @@
             });
         });
     }
+    function onError(data, text, error) {
+        console.log(data, text, error);
+    }
+
     $.ajax({
         url: "data.json",
         data: "",
         success: onSuccess,
+        error: onError,
         dataType: "json"
     });
     function onAbout(response) {
@@ -107,6 +112,7 @@
         url: "about.html",
         data: "",
         success: onAbout,
+        error: onError,
         dataType: "html"
     });
 </script>
