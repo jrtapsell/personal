@@ -18,8 +18,8 @@
     },
     {
       "name": "GitWeb",
-      "url": "",
-      "icon": "https://jrtapsell.github.io/gitWeb/",
+      "url": "https://jrtapsell.github.io/gitWeb/",
+      "icon": "/github.png",
       "description": "Web interface for summary of github information",
       "backing": "#CCC"
     }
