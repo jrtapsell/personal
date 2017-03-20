@@ -14,7 +14,7 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-            <span class="mdl-layout-title">Jrtapsell</span>
+            <span class="mdl-layout-title">James Tapsell</span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
@@ -23,7 +23,9 @@
         </div>
     </header>
     <main class="mdl-layout__content">
-        <div class="page-content" id="target">
+        <div class="page-content">
+            <div id="about"></div>
+            <div id="target"></div>
         </div>
     </main>
 </div>
@@ -97,6 +99,15 @@
         data: "",
         success: onSuccess,
         dataType: "json"
+    });
+    function onAbout(response) {
+        $("#about").html(response);
+    }
+    $.ajax({
+        url: "about.html",
+        data: "",
+        success: onAbout,
+        dataType: "html"
     });
 </script>
 </html>
