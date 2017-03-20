@@ -1,0 +1,21 @@
+.mdl-card__title {
+    color: #fff;
+    height: 300px;
+}
+.mdl-card__menu {
+    color: #fff;
+}
+.card-title {
+    background: rgba(0,0,0,0.6);
+    padding: 0.2em;
+}
+h2 {
+    text-align: center;
+    background: #ddd;
+}
+.mdl-card__title {
+    background-size: contain;
+}
+.image-wrapper {
+    padding: 1em;
+}

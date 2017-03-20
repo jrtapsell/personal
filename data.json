@@ -1,0 +1,45 @@
+{
+  "Events": [
+    {
+      "name": "Inter-ACE 2017",
+      "url": "https://inter-ace.org/",
+      "icon": "https://inter-ace.org/gfx/logo.png",
+      "description": "Inter-ACE Team 'Buffer Underrun'",
+      "backing": "#101010"
+    }
+  ],
+  "Projects": [
+    {
+      "name": "UROP (Summer 2016)",
+      "url": "https://art.jrtapsell.co.uk",
+      "icon": "https://www.royalholloway.ac.uk/iquad/documents/other/logos/logo-large-london.jpg",
+      "description": "Eclipse plugin for the ART parser generator",
+      "backing": "#202A30"
+    }
+  ],
+  "Sites": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/jrtapsell",
+      "icon": "/github.png",
+      "description": "Source code version control",
+      "backing": "#CCC"
+    }
+  ],
+  "Social": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/james.tapsell",
+      "icon": "https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/sdffdsafsdf.png",
+      "description": "Social media",
+      "backing": "#4169A7"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://t.me/jrtapsell",
+      "icon": "/telegram.png",
+      "description": "Messaging",
+      "backing": "#CCC"
+    }
+  ]
+}

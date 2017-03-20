@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jrtapsell</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Jrtapsell</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation"id="linksbar">
+            </nav>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="page-content" id="target">
+        </div>
+    </main>
+</div>
+</body>
+<script>
+    function cardify(outer, item) {
+        var card = $("<div/>", {
+            "class": "mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col"
+        });
+        var image_wrapper = $("<div/>", {
+            "class": "image-wrapper"
+        });
+        var title_div = $("<div/>", {
+            "class": "mdl-card__title"
+        });
+        var title = $("<h2/>", {
+            "class": "mdl-card__title-text card-title"
+        });
+        var description = $("<div/>", {
+            "class": "mdl-card__supporting-text"
+        });
+        var link_div = $("<div/>", {
+            "class": "mdl-card__actions mdl-card--border"
+        });
+        var link = $("<a/>", {
+            "class": "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+        });
+        title_div.css("background", "url('" + item["icon"] + "') no-repeat center ");
+        title_div.css("background-size", "contain");
+        image_wrapper.css("background", item["backing"]);
+        description.text(item["description"]);
+        card.appendTo(outer);
+        title_div.appendTo(image_wrapper);
+        image_wrapper.appendTo(card);
+        description.appendTo(card);
+        title.appendTo(title_div);
+        title.text(item["name"]);
+        link_div.appendTo(card);
+        link.appendTo(link_div);
+        link.text("Go To");
+        link.attr("href", item["url"])
+    }
+
+    function onSuccess(data) {
+        var target = $("#target");
+        var linksbar = $("#linksbar");
+        $.each(data, function(key, value) {
+            var link = $("<a/>", {
+                "class": "mdl-navigation__link"
+            });
+            link.text(key);
+            link.attr("href", "#" + key);
+            link.appendTo(linksbar);
+            var bar = $("<h2/>", {
+                "id": key
+            });
+            bar.text(key);
+            bar.appendTo(target);
+            var projects = $("<div/>", {
+                "class": "card-container mdl-grid"
+            });
+            projects.appendTo(target);
+            console.log(key, value);
+            $.each(value, function(_, item) {
+                cardify(projects, item);
+            });
+        });
+    }
+    $.ajax({
+        url: "data.json",
+        data: "",
+        success: onSuccess,
+        dataType: "json"
+    });
+</script>
+</html>
