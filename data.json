@@ -1,4 +1,16 @@
 {
+  "Keys": [
+    {
+      "name": "SSH keys",
+      "url": "http://vps.jrtapsell.co.uk",
+      "description": "My SSH keys"
+    },
+    {
+      "name": "PGP keys",
+      "description": "My PGP keys",
+      "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661"
+    }
+  ],
   "Events": [
     {
       "name": "Inter-ACE 2017",

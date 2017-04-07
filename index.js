@@ -20,10 +20,16 @@ function cardify(outer, item) {
   var link = $("<a/>", {
     "class": "mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
   });
-  title_div.css("background", "url('" + item["icon"] + "') no-repeat center ");
-  title_div.css("background-size", "contain");
-  image_wrapper.css("background", item["backing"]);
-  description.text(item["description"]);
+  if (item["icon"]) {
+    title_div.css("background", "url('" + item["icon"] + "') no-repeat center ");
+    title_div.css("background-size", "contain");
+  }
+  image_wrapper.css("background", item["backing"] ? item["backing"] : "#CCC");
+
+  if (item["description"]) {
+    description.text(item["description"]);
+  }
+
   card.appendTo(outer);
   title_div.appendTo(image_wrapper);
   image_wrapper.appendTo(card);
