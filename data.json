@@ -45,6 +45,16 @@
       "icon": "https://www.royalholloway.ac.uk/iquad/documents/other/logos/logo-large-london.jpg",
       "description": "Web space provided by the CS Department",
       "backing": "#202A30"
+    },
+    {
+      "name": "Launchpad",
+      "url": "https://launchpad.net/~jrtapsell",
+      "description": "My profile on the ubuntu launchpad site"
+    },
+    {
+      "name": "Android apps",
+      "url": "https://play.google.com/store/apps/developer?id=James+Tapsell",
+      "description": "My Android Apps"
     }
   ],
   "Keys": [
