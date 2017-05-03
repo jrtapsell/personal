@@ -23,5 +23,10 @@ gulp.task('img', function(){
     .pipe(gulp.dest("dist/img"))
 });
 
+gulp.task('extra', function(){
+  return gulp.src('extra/*')
+    .pipe(gulp.dest("dist"))
+});
 
-gulp.task('default', ['render', 'css', 'img']);
+
+gulp.task('default', ['render', 'css', 'img', 'extra']);
