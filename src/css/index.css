@@ -19,3 +19,11 @@ h2 {
 .image-wrapper {
     padding: 1em;
 }
+
+.mdl-card__supporting-text {
+    flex-grow: 1;
+}
+
+.mdl-card__actions {
+    flex-grow: 0;
+}
