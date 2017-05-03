@@ -82,15 +82,8 @@
     ]
   },
   {
-    "name": "Social",
+    "name": "Contact",
     "children": [
-      {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/james.tapsell",
-        "icon": "https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/sdffdsafsdf.png",
-        "description": "Social media",
-        "backing": "#4169A7"
-      },
       {
         "name": "Telegram",
         "url": "https://t.me/jrtapsell",
@@ -104,6 +97,13 @@
         "description": "My LinkedIn profile",
         "icon": "img/linkedin.png",
         "backing":"#1e2022"
+      },
+      {
+        "name": "Facebook",
+        "url": "https://www.facebook.com/james.tapsell",
+        "icon": "https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/sdffdsafsdf.png",
+        "description": "Social media",
+        "backing": "#4169A7"
       }
     ]
   }
