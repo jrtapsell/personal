@@ -19,7 +19,7 @@
     {
       "name": "GitWeb",
       "url": "https://jrtapsell.github.io/gitWeb/",
-      "icon": "/github.png",
+      "icon": "img/github.png",
       "description": "Web interface for summary of github information",
       "backing": "#CCC"
     }
@@ -28,7 +28,7 @@
     {
       "name": "GitHub",
       "url": "https://github.com/jrtapsell",
-      "icon": "/github.png",
+      "icon": "img/github.png",
       "description": "Source code version control",
       "backing": "#CCC"
     },
@@ -80,7 +80,7 @@
     {
       "name": "Telegram",
       "url": "https://t.me/jrtapsell",
-      "icon": "/telegram.png",
+      "icon": "img/telegram.png",
       "description": "Messaging",
       "backing": "#CCC"
     }
