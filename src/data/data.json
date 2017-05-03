@@ -97,6 +97,11 @@
         "icon": "img/telegram.png",
         "description": "Messaging",
         "backing": "#CCC"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jrtapsell/",
+        "description": "My LinkedIn profile"
       }
     ]
   }
