@@ -27,7 +27,7 @@
             <!-- Navigation -->
             <nav class="mdl-navigation" id="linksbar">
                 {{#each this}}
-                    <a href="#{{@key}}" class="mdl-navigation__link">{{@key}}</a>
+                    <a href="#{{name}}" class="mdl-navigation__link">{{name}}</a>
                 {{/each}}
             </nav>
         </div>
@@ -45,7 +45,8 @@
             </div>
             <div id="target">
                 {{#each this}}
-                    <h2 id="{{@key}}">{{@key}}</h2>
+                    <h2 id="{{name}}">{{name}}</h2>
+                    {{#with children}}
                     <div class="card-container mdl-grid">
                         {{#each this}}
                         <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
@@ -59,6 +60,7 @@
                         </div>
                         {{/each}}
                     </div>
+                    {{/with}}
                 {{/each}}
             </div>
         </div>
