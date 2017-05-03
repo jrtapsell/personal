@@ -101,7 +101,9 @@
       {
         "name": "LinkedIn",
         "url": "https://www.linkedin.com/in/jrtapsell/",
-        "description": "My LinkedIn profile"
+        "description": "My LinkedIn profile",
+        "icon": "img/linkedin.png",
+        "backing":"#1e2022"
       }
     ]
   }
