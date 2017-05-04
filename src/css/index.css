@@ -9,6 +9,12 @@
     background: rgba(0,0,0,0.6);
     padding: 0.2em;
 }
+@media screen and (max-width: 1024px) {
+    .mdl-layout__header-row {
+        height: 56px;
+        padding: 0 16px 0 16px;
+    }
+}
 h1 {
     text-align: center;
     background: #ddd;
