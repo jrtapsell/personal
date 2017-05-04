@@ -65,7 +65,8 @@
         "name": "Android apps",
         "url": "https://play.google.com/store/apps/dev?id=8619882920178362328",
         "description": "My Android Apps",
-        "icon": "https://developer.android.com/images/brand/Android_Robot_200.png"
+        "icon": "https://developer.android.com/images/brand/Android_Robot_200.png",
+        "backing": "#6c8223"
       },
       {
         "name": "Medium",
