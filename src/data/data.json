@@ -57,7 +57,9 @@
       {
         "name": "Launchpad",
         "url": "https://launchpad.net/~jrtapsell",
-        "description": "My profile on the ubuntu launchpad site"
+        "description": "My profile on the ubuntu launchpad site",
+        "icon": "http://design.ubuntu.com/wp-content/uploads/ubuntu-logo14.png",
+        "backing": "#dd4814"
       },
       {
         "name": "Android apps",
