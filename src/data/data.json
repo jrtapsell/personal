@@ -20,13 +20,6 @@
         "icon": "https://www.royalholloway.ac.uk/iquad/documents/other/logos/logo-large-london.jpg",
         "description": "Eclipse plugin for the ART parser generator",
         "backing": "#202A30"
-      },
-      {
-        "name": "GitWeb",
-        "url": "https://jrtapsell.github.io/gitWeb/",
-        "icon": "img/github.png",
-        "description": "Web interface for summary of github information",
-        "backing": "#CCC"
       }
     ]
   },
