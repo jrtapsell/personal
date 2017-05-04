@@ -1,6 +1,6 @@
 .mdl-card__title {
     color: #fff;
-    height: 300px;
+    height: 10em;
 }
 .mdl-card__menu {
     color: #fff;
@@ -12,6 +12,7 @@
 h1 {
     text-align: center;
     background: #ddd;
+    font-size: 3em;
 }
 .mdl-card__title {
     background-size: contain;
