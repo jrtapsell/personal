@@ -82,12 +82,14 @@
       {
         "name": "SSH keys",
         "url": "http://vps.jrtapsell.co.uk",
-        "description": "My SSH keys"
+        "description": "My SSH keys",
+        "icon": "https://d30y9cdsu7xlg0.cloudfront.net/png/7169-200.png"
       },
       {
         "name": "PGP keys",
         "description": "My PGP keys",
-        "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661"
+        "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661",
+        "icon": "https://d30y9cdsu7xlg0.cloudfront.net/png/7169-200.png"
       }
     ]
   },
