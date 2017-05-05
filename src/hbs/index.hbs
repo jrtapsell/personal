@@ -38,14 +38,14 @@
         </div>
         <div class="mdl-layout__header-row">
             <img src="img/icon64.jpg" class="mdl-shadow--2dp avatar" alt="My Avatar">
-            <span class="mdl-layout-title">James Tapsell</span>
+            <h1 class="mdl-layout-title">James Tapsell</h1>
             <!-- Add spacer, to align navigation to the right -->
         </div>
     </header>
     <main class="mdl-layout__content">
         <div class="page-content">
             <div id="about">
-                <h1>--- About Me ---</h1>
+                <h2>--- About Me ---</h2>
                 <div class="mdl-grid">
                     <div class="mdl-cell mdl-cell--2-col"></div>
                     <div class=" mdl-cell mdl-cell--8-col">
@@ -58,7 +58,7 @@
             </div>
             <div id="target">
                 {{#each this}}
-                    <h1 id="{{name}}">--- {{name}} ---</h1>
+                    <h2 id="{{name}}">--- {{name}} ---</h2>
                     {{#with children}}
                         <div class="card-container mdl-grid">
                             {{#each this}}
@@ -67,7 +67,7 @@
                                          style="background: {{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}};">
                                         <div class="mdl-card__title"
                                              style="background: url('{{{icon}}}') center center / contain no-repeat;">
-                                            <h2 class="mdl-card__title-text card-title">{{name}}</h2>
+                                            <h3 class="mdl-card__title-text card-title">{{name}}</h3>
                                         </div>
                                     </div>
                                     <div class="mdl-card__supporting-text">{{description}}</div>
