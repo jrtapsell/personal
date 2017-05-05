@@ -38,12 +38,6 @@ h1 {
     flex-grow: 0;
 }
 
-@media (max-width: 666px) {
-    .mdl-cell--hide-phone {
-        display: none !important;
-    }
-}
-
 .avatar {
     height: 80%;
     margin-right: 1em;
