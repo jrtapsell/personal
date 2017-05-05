@@ -22,6 +22,13 @@ gulp.task('css', function(){
 });
 
 
+gulp.task('res', function(){
+  return gulp.src('src/res/*')
+    .pipe(gulp.dest("dist/res"))
+});
+
+
+
 gulp.task('img', function(){
   return gulp.src('src/img/*')
     .pipe(gulp.dest("dist/img"))
