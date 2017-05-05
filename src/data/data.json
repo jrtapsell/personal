@@ -5,7 +5,7 @@
       {
         "name": "Inter-ACE 2017",
         "url": "https://inter-ace.org/",
-        "icon": "/img/interace.png",
+        "icon": "img/interace.png",
         "description": "Inter-ACE Team 'Buffer Underrun'",
         "backing": "#101010"
       }
@@ -17,7 +17,7 @@
       {
         "name": "UROP (Summer 2016)",
         "url": "https://art.jrtapsell.co.uk",
-        "icon": "/img/rhul.jpg",
+        "icon": "img/rhul.jpg",
         "description": "Eclipse plugin for the ART parser generator",
         "backing": "#202A30"
       }
@@ -29,21 +29,21 @@
       {
         "name": "GitHub",
         "url": "https://github.com/jrtapsell",
-        "icon": "/img/github.png",
+        "icon": "img/github.png",
         "description": "Source code version control",
         "backing": "#CCC"
       },
       {
         "name": "RHUL College Web Space",
         "url": "http://personal.rhul.ac.uk/zcva/821/",
-        "icon": "/img/rhul.jpg",
+        "icon": "img/rhul.jpg",
         "description": "Web space provided by Royal Holloway",
         "backing": "#202A30"
       },
       {
         "name": "RHUL Department Web Space",
         "url": "http://wwwdev.cs.rhul.ac.uk/zcva821/",
-        "icon": "/img/rhul.jpg",
+        "icon": "img/rhul.jpg",
         "description": "Web space provided by the CS Department",
         "backing": "#202A30"
       },
@@ -51,21 +51,21 @@
         "name": "Launchpad",
         "url": "https://launchpad.net/~jrtapsell",
         "description": "My profile on the ubuntu launchpad site",
-        "icon": "/img/ubuntu.png",
+        "icon": "img/ubuntu.png",
         "backing": "#dd4814"
       },
       {
         "name": "Android apps",
         "url": "https://play.google.com/store/apps/dev?id=8619882920178362328",
         "description": "My Android Apps",
-        "icon": "/img/android.png",
+        "icon": "img/android.png",
         "backing": "#6c8223"
       },
       {
         "name": "Medium",
         "url": "https://medium.com/jrtapsell",
         "description": "Article hosting",
-        "icon": "/img/medium.png",
+        "icon": "img/medium.png",
         "backing": "#1e4a32"
       }
     ]
@@ -77,13 +77,13 @@
         "name": "SSH keys",
         "url": "http://vps.jrtapsell.co.uk",
         "description": "My SSH keys",
-        "icon": "/img/key.png"
+        "icon": "img/key.png"
       },
       {
         "name": "PGP keys",
         "description": "My PGP keys",
         "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661",
-        "icon": "/img/key.png"
+        "icon": "img/key.png"
       }
     ]
   },
@@ -107,7 +107,7 @@
       {
         "name": "Facebook",
         "url": "https://www.facebook.com/james.tapsell",
-        "icon": "/img/facebook.png",
+        "icon": "img/facebook.png",
         "description": "Social media",
         "backing": "#4169A7"
       }
