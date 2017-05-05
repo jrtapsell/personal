@@ -40,4 +40,4 @@ gulp.task('extra', function(){
 });
 
 
-gulp.task('default', ['render', 'css', 'img', 'extra']);
+gulp.task('default', ['render', 'css', 'img', 'extra', 'res']);
