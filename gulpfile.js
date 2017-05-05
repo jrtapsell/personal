@@ -23,7 +23,7 @@ gulp.task('css', function(){
 
 
 gulp.task('res', function(){
-  return gulp.src('src/res/*')
+  return gulp.src('src/res/**')
     .pipe(gulp.dest("dist/res"))
 });
 
