@@ -86,31 +86,5 @@
         "icon": "img/key.png"
       }
     ]
-  },
-  {
-    "name": "Contact",
-    "children": [
-      {
-        "name": "Telegram",
-        "url": "https://t.me/jrtapsell",
-        "icon": "img/telegram.png",
-        "description": "Messaging",
-        "backing": "#074563"
-      },
-      {
-        "name": "LinkedIn",
-        "url": "https://www.linkedin.com/in/jrtapsell/",
-        "description": "My LinkedIn profile",
-        "icon": "img/linkedin.png",
-        "backing":"#1e2022"
-      },
-      {
-        "name": "Facebook",
-        "url": "https://www.facebook.com/james.tapsell",
-        "icon": "img/facebook.png",
-        "description": "Social media",
-        "backing": "#4169A7"
-      }
-    ]
   }
 ]

@@ -21,6 +21,7 @@
         ga('send', 'pageview');
     </script>
     <link rel="stylesheet" href="res/mdl/custom.css">
+    <link rel="stylesheet" href="res/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" type="image/png" href="img/icon64.jpg">
 </head>
@@ -29,20 +30,16 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-            <img src="img/icon64.jpg" style="
-    height: 80%;
-    margin-right: 1em;
-    border-radius: 40%;
-            " class="mdl-shadow--2dp" alt="My Avatar">
+            <img src="img/icon64.jpg" class="mdl-shadow--2dp avatar" alt="My Avatar">
             <span class="mdl-layout-title">James Tapsell</span>
             <!-- Add spacer, to align navigation to the right -->
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation" id="linksbar">
-                <a href="#about" class="mdl-navigation__link mdl-cell--hide-phone ">About</a>
-                {{#each this}}
-                    <a href="#{{name}}" class="mdl-navigation__link mdl-cell--hide-phone ">{{name}}</a>
-                {{/each}}
+                <a href="https://www.facebook.com/james.tapsell" class="mdl-navigation__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://telegram.me/jrtapsell" class="mdl-navigation__link"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/jrtapsell/" class="mdl-navigation__link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://github.com/jrtapsell" class="mdl-navigation__link"><i class="fa fa-github" aria-hidden="true"></i></a>
             </nav>
         </div>
     </header>
