@@ -3,6 +3,7 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
+var download = require("gulp-download");
 
 gulp.task('render', function () {
   var templateData = require("./src/data/data.json");
@@ -39,5 +40,10 @@ gulp.task('extra', function(){
     .pipe(gulp.dest("dist"))
 });
 
+gulp.task('ga', function () {
+  return download('https://www.google-analytics.com/analytics.js')
+    .pipe(gulp.dest("dist/res/ga/"));
+});
 
-gulp.task('default', ['render', 'css', 'img', 'extra', 'res']);
+
+gulp.task('default', ['render', 'css', 'img', 'extra', 'res', 'ga']);
