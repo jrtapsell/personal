@@ -34,3 +34,9 @@ h1 {
 .mdl-card__actions {
     flex-grow: 0;
 }
+
+@media (max-width: 666px) {
+    .mdl-cell--hide-phone {
+        display: none !important;
+    }
+}
