@@ -60,8 +60,18 @@ gulp.task('extra', function(){
 
 gulp.task('ga', function () {
   return download('https://www.google-analytics.com/analytics.js')
-    .pipe(gulp.dest("dist/res/ga/"));
+    .pipe(gulp.dest("dist/res/ga/"))
+});
+
+gulp.task('make-sw', function(callback) {
+  var path = require('path');
+  var swPrecache = require('sw-precache');
+
+  swPrecache.write("dist/service-worker.js", {
+    staticFileGlobs: ['dist/**/*'],
+    stripPrefix: 'dist'
+  }, callback);
 });
 
 
-gulp.task('default', ['render', 'css', 'img', 'extra', 'res', 'ga', 'pages']);
+gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'res', 'ga', 'pages', 'make-sw'));
