@@ -43,7 +43,6 @@ gulp.task('css', function(){
 
 gulp.task('font', function(){
   return gulp.src('src/res/min-font/**')
-    .pipe(cleanCSS())
     .pipe(gulp.dest("dist/res/min-font"))
 });
 
