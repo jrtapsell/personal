@@ -41,9 +41,22 @@ gulp.task('css', function(){
 });
 
 
-gulp.task('res', function(){
-  return gulp.src('src/res/**')
-    .pipe(gulp.dest("dist/res"))
+gulp.task('font', function(){
+  return gulp.src('src/res/min-font/**')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("dist/res/min-font"))
+});
+
+
+gulp.task('mdl-css', function() {
+  return gulp.src('src/res/mdl/custom.css')
+    .pipe(cleanCSS())
+    .pipe(gulp.dest("dist/res/mdl"));
+});
+
+gulp.task('mdl-js', function() {
+  return gulp.src('src/res/mdl/material.min.js')
+    .pipe(gulp.dest("dist/res/mdl"))
 });
 
 
@@ -74,4 +87,4 @@ gulp.task('make-sw', function(callback) {
 });
 
 
-gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'res', 'ga', 'pages', 'make-sw'));
+gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'make-sw', 'mdl-css', 'mdl-js'));
