@@ -1,3 +1,22 @@
+{{#*inline ld_json}}
+
+<script type="application/ld+json">
+ld_json="{
+"@context" : "http://schema.org",
+"@type" : "Person",
+"name" : "James Tapsell",
+"url" : "https://www.jrtapsell.co.uk",
+"sameAs" : [
+"https://www.facebook.com/james.tapsell",
+"https://telegram.me/jrtapsell",
+"https://www.linkedin.com/in/jrtapsell/",
+"https://github.com/jrtapsell"
+],
+"email": "contact@jrtapsell.co.uk",
+"image": "https://www.jrtapsell.co.uk/img/icon512.jpg"
+}"
+</script>
+{{/inline}}
 {{#*inline "content"}}
 <div id="about">
     <h2>--- About Me ---</h2>
@@ -39,4 +58,4 @@
     {{/each}}
 </div>
 {{/inline}}
-{{> layout/base title="James Tapsell"}}
+{{> layout/base title="James Tapsell" description="The personal site of James Tapsell" url="https://www.jrtapsell.co.uk"}}

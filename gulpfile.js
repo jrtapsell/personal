@@ -24,7 +24,8 @@ gulp.task('pages', function () {
   return gulp.src('src/hbs/pages/*.hbs')
     .pipe(handlebars(null, {
       ignorePartials: false,
-      batch: ['src/partials']
+      batch: ['src/partials'],
+      compile: {strict: true}
     }))
     .pipe(rename({
       extname: ".html"
