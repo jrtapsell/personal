@@ -4,7 +4,7 @@
     "children": [
       {
         "name": "Inter-ACE 2017",
-        "url": "https://inter-ace.org/",
+        "url": "/interace-2017.html",
         "icon": "img/interace.png",
         "description": "Inter-ACE Team 'Buffer Underrun'",
         "backing": "#101010"
