@@ -41,6 +41,14 @@ gulp.task('css', function(){
 });
 
 
+
+
+gulp.task('manifest', function(){
+  return gulp.src('src/manifest/manifest.json')
+    .pipe(gulp.dest("dist"))
+});
+
+
 gulp.task('font', function(){
   return gulp.src('src/res/min-font/**')
     .pipe(gulp.dest("dist/res/min-font"))
@@ -86,4 +94,4 @@ gulp.task('make-sw', function(callback) {
 });
 
 
-gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'make-sw', 'mdl-css', 'mdl-js'));
+gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw'));

@@ -1,0 +1,21 @@
+{
+  "short_name": "James Tapsell",
+  "name": "James Tapsell",
+  "icons": [
+    {
+      "src": "img/icon64.jpeg",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icon512.jpeg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#3f51b5",
+  "background_color": "#fff",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -2,7 +2,6 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <script>
-
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('service-worker.js').then(function(reg) {
@@ -31,6 +30,7 @@
             });
         }
     </script>
+    <link rel="manifest" href="/manifest.json">
     <meta charset="UTF-8">
     <title>{{title}}</title>
     <script defer src="res/mdl/material.min.js"></script>
