@@ -20,7 +20,6 @@ gulp.task('render', function () {
 
 
 gulp.task('pages', function () {
-
   return gulp.src('src/hbs/pages/*.hbs')
     .pipe(handlebars(null, {
       ignorePartials: false,
