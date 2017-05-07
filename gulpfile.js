@@ -9,7 +9,7 @@ gulp.task('render', function () {
   var templateData = require("./src/data/data.json");
 
   return gulp.src('src/hbs/index.hbs')
-    .pipe(handlebars(templateData, {
+    .pipe(handlebars({"items":templateData}, {
       ignorePartials: false,
       batch: ['src/partials']
     }))
