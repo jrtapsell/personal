@@ -9,8 +9,26 @@ gulp.task('render', function () {
   var templateData = require("./src/data/data.json");
 
   return gulp.src('src/hbs/index.hbs')
-    .pipe(handlebars(templateData))
+    .pipe(handlebars(templateData, {
+      ignorePartials: false,
+      batch: ['src/partials']
+    }))
     .pipe(rename('index.html'))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('dist'));
+});
+
+
+gulp.task('pages', function () {
+
+  return gulp.src('src/hbs/pages/*.hbs')
+    .pipe(handlebars(null, {
+      ignorePartials: false,
+      batch: ['src/partials']
+    }))
+    .pipe(rename({
+      extname: ".html"
+    }))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist'));
 });
@@ -46,4 +64,4 @@ gulp.task('ga', function () {
 });
 
 
-gulp.task('default', ['render', 'css', 'img', 'extra', 'res', 'ga']);
+gulp.task('default', ['render', 'css', 'img', 'extra', 'res', 'ga', 'pages']);

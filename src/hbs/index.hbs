@@ -1,109 +1,42 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-    <meta charset="UTF-8">
-    <title>James Tapsell</title>
-    <script defer src="res/mdl/material.min.js"></script>
-    <meta name="description" content="The personal site of James Tapsell">
-    <meta property="og:title" content="James Tapsell" />
-    <meta property="og:description" content="The personal site of James Tapsell" />
-    <meta property="og:image" content="img/icon64.jpg" />
-    <meta property="og:url" content="https://www.jrtapsell.co.uk" />
-    <meta name="description" content="The personal site of James Tapsell."/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#2d3a4a">
-    <script type="application/ld+json">
-        {
-          "@context" : "http://schema.org",
-          "@type" : "Person",
-          "name" : "James Tapsell",
-          "url" : "https://www.jrtapsell.co.uk",
-          "sameAs" : [
-            "https://www.facebook.com/james.tapsell",
-            "https://telegram.me/jrtapsell",
-            "https://www.linkedin.com/in/jrtapsell/",
-            "https://github.com/jrtapsell"
-            ],
-          "email": "contact@jrtapsell.co.uk",
-          "image": "https://www.jrtapsell.co.uk/img/icon512.jpg"
-        }
-    </script>
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','res/ga/analytics.js','ga');
-        ga('create', 'UA-97461112-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <link rel="icon" type="image/png" href="img/icon64.jpg">
-</head>
-<body>
-<!-- Always shows a header, even in smaller screens. -->
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-            <div class="mdl-layout-spacer"></div>
-            <nav class="mdl-navigation" id="linksbar">
-                <a href="https://www.facebook.com/james.tapsell" class="mdl-navigation__link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://telegram.me/jrtapsell" class="mdl-navigation__link"><i class="fa fa-telegram" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/jrtapsell/" class="mdl-navigation__link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://github.com/jrtapsell" class="mdl-navigation__link"><i class="fa fa-github" aria-hidden="true"></i></a>
-            </nav>
-            <div class="mdl-layout-spacer"></div>
+{{#*inline "content"}}
+<div id="about">
+    <h2>--- About Me ---</h2>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col"></div>
+        <div class=" mdl-cell mdl-cell--8-col">
+            <p>
+                I am student at <b>Royal Holloway, University of London</b>, studying <b>MSci Computer
+                Science (Information Security) with a year in industry.</b>
+            </p>
         </div>
-        <div class="mdl-layout__header-row">
-            <img src="img/icon64.jpg" class="mdl-shadow--2dp avatar" alt="My Avatar">
-            <h1 class="mdl-layout-title">James Tapsell</h1>
-            <!-- Add spacer, to align navigation to the right -->
-        </div>
-    </header>
-    <main class="mdl-layout__content">
-        <div class="page-content">
-            <div id="about">
-                <h2>--- About Me ---</h2>
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--2-col"></div>
-                    <div class=" mdl-cell mdl-cell--8-col">
-                        <p>
-                            I am student at <b>Royal Holloway, University of London</b>, studying <b>MSci Computer
-                            Science (Information Security) with a year in industry.</b>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div id="target">
+    </div>
+</div>
+<div id="target">
+    {{#each this}}
+        <h2 id="{{name}}">--- {{name}} ---</h2>
+        {{#with children}}
+            <div class="card-container mdl-grid">
                 {{#each this}}
-                    <h2 id="{{name}}">--- {{name}} ---</h2>
-                    {{#with children}}
-                        <div class="card-container mdl-grid">
-                            {{#each this}}
-                                <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
-                                    <div class="image-wrapper"
-                                         style="background: {{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}};">
-                                        <div class="mdl-card__title"
-                                             style="background: url('{{{icon}}}') center center / contain no-repeat;">
-                                            <h3 class="mdl-card__title-text card-title">{{name}}</h3>
-                                        </div>
-                                    </div>
-                                    <div class="mdl-card__supporting-text">{{description}}</div>
-                                    <div class="mdl-card__actions mdl-card--border">
-                                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
-                                           href="{{{url}}}" data-upgraded=",MaterialButton,MaterialRipple">
-                                            Go To
-                                        </a>
-                                    </div>
-                                </div>
-                            {{/each}}
+                    <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+                        <div class="image-wrapper"
+                             style="background: {{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}};">
+                            <div class="mdl-card__title"
+                                 style="background: url('{{{icon}}}') center center / contain no-repeat;">
+                                <h3 class="mdl-card__title-text card-title">{{name}}</h3>
+                            </div>
                         </div>
-                    {{/with}}
+                        <div class="mdl-card__supporting-text">{{description}}</div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"
+                               href="{{{url}}}" data-upgraded=",MaterialButton,MaterialRipple">
+                                Go To
+                            </a>
+                        </div>
+                    </div>
                 {{/each}}
             </div>
-        </div>
-    </main>
+        {{/with}}
+    {{/each}}
 </div>
-</body>
-<link rel="stylesheet" href="res/mdl/custom.css">
-<link rel="stylesheet" href="res/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="./index.css">
-</html>
+{{/inline}}
+{{> layout/base title="James Tapsell"}}
