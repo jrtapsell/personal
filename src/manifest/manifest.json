@@ -3,12 +3,12 @@
   "name": "James Tapsell",
   "icons": [
     {
-      "src": "img/icon64.jpeg",
+      "src": "img/icon64.jpg",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "img/icon512.jpeg",
+      "src": "img/icon512.jpg",
       "sizes": "512x512",
       "type": "image/png"
     }
