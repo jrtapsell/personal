@@ -4,6 +4,8 @@ var rename = require('gulp-rename');
 var htmlmin = require('gulp-htmlmin');
 var cleanCSS = require('gulp-clean-css');
 var download = require("gulp-download");
+var gulpIgnore = require('gulp-ignore');
+var sitemap = require('gulp-sitemap');
 
 gulp.task('render', function () {
   var templateData = require("./src/data/data.json");
@@ -93,5 +95,16 @@ gulp.task('make-sw', function(callback) {
   }, callback);
 });
 
+gulp.task('sitemap', function () {
+    return gulp.src('dist/*.html', {
+      read: false
+    })
+    .pipe(gulpIgnore.exclude('google*.html'))
+    .pipe(sitemap({
+      siteUrl: 'http://www.jrtapsell.co.uk'
+    }))
+    .pipe(gulp.dest('./dist'));
+});
 
-gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw'));
+
+gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));

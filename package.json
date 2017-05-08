@@ -24,7 +24,9 @@
     "gulp-data": "^1.2.1",
     "gulp-download": "0.0.1",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-ignore": "^2.0.2",
     "gulp-rename": "^1.2.2",
+    "gulp-sitemap": "^4.2.0",
     "sw-precache": "^5.1.1"
   }
 }
