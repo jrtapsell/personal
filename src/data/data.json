@@ -34,20 +34,6 @@
         "backing": "#CCC"
       },
       {
-        "name": "RHUL College Web Space",
-        "url": "http://personal.rhul.ac.uk/zcva/821/",
-        "icon": "img/rhul.jpg",
-        "description": "Web space provided by Royal Holloway",
-        "backing": "#202A30"
-      },
-      {
-        "name": "RHUL Department Web Space",
-        "url": "http://wwwdev.cs.rhul.ac.uk/zcva821/",
-        "icon": "img/rhul.jpg",
-        "description": "Web space provided by the CS Department",
-        "backing": "#202A30"
-      },
-      {
         "name": "Launchpad",
         "url": "https://launchpad.net/~jrtapsell",
         "description": "My profile on the ubuntu launchpad site",
