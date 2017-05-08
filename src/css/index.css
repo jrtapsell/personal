@@ -53,6 +53,7 @@ h2 {
     margin-bottom: 0;
     background: #fff;
     padding: 0 2%;
+    min-width: 80vw;
 }
 
 main.mdl-layout__content.mdl-grid {
