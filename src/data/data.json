@@ -27,6 +27,13 @@
         "icon": "img/rhul.jpg",
         "description": "Eclipse plugin for the ART parser generator",
         "backing": "#202A30"
+      },
+      {
+        "name": "CTF Team",
+        "url": "https://www.tu6.pm",
+        "icon": "img/tu6pm.jpg",
+        "description": "TU6PM (Royal Holloway, University of London CTF Team)",
+        "backing": "#000308"
       }
     ]
   },
