@@ -6,6 +6,8 @@ var cleanCSS = require('gulp-clean-css');
 var download = require("gulp-download");
 var gulpIgnore = require('gulp-ignore');
 var sitemap = require('gulp-sitemap');
+var aws = require( 'gulp-awspublish' );
+var gutil = require('gulp-util');
 
 gulp.task('render', function () {
   var templateData = require("./src/data/data.json");
@@ -107,4 +109,31 @@ gulp.task('sitemap', function () {
 });
 
 
+var key = process.env.AWS_ACCESS_KEY_ID;
+var secret = process.env.AWS_SECRET_ACCESS_KEY;
+
+gutil.log(key);
+gutil.log(secret);
+
+gulp.task('aws', () => {
+  var publisher = aws.create({
+    region: 'eu-west-2',
+    params: {
+      Bucket: "wwwjrtapsellcouk",
+    },
+    accessKeyId: key,
+    secretAccessKey: secret
+  });
+
+  var headers = {
+    'Cache-Control': 'max-age=315360000, no-transform, public'
+  };
+  return gulp.src('./dist/**')
+    .pipe(publisher.publish(headers))
+    .pipe(publisher.cache())
+    .pipe(aws.reporter());
+});
+
+
 gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
+gulp.task('deploy', gulp.series('default', 'aws'));
