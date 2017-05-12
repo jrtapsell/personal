@@ -70,6 +70,11 @@ gulp.task('mdl-js', function() {
     .pipe(gulp.dest("dist/res/mdl"))
 });
 
+gulp.task('js', function() {
+  return gulp.src('src/js/*.js')
+    .pipe(gulp.dest("dist/js"))
+});
+
 
 
 gulp.task('img', function(){
@@ -135,5 +140,5 @@ gulp.task('aws', () => {
 });
 
 
-gulp.task('default', gulp.series('render', 'css', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
+gulp.task('default', gulp.series('render', 'css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
 gulp.task('deploy', gulp.series('default', 'aws'));
