@@ -71,3 +71,7 @@ main.mdl-layout__content.mdl-grid {
 body {
     background: #777d84;
 }
+
+.page-content > h3{
+    text-align: center;
+}
