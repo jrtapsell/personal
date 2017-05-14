@@ -75,3 +75,11 @@ body {
 .page-content > h3{
     text-align: center;
 }
+blockquote:before {
+    content: "";
+}
+
+
+blockquote:after {
+    content: "";
+}
