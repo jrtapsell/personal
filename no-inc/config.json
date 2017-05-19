@@ -31,9 +31,9 @@
       "src": "fontawesome"
     },
     {
-      "uid": "7cb041a180b574545dbeb1982fd7efe4",
+      "uid": "bec4255371bd7e75c420b4a440715516",
       "css": "keybase",
-      "code": 107,
+      "code": 59392,
       "src": "custom_icons",
       "selected": true,
       "svg": {
@@ -43,6 +43,12 @@
       "search": [
         "keybase"
       ]
+    },
+    {
+      "uid": "627abcdb627cb1789e009c08e2678ef9",
+      "css": "twitter",
+      "code": 61593,
+      "src": "fontawesome"
     }
   ]
 }
