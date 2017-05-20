@@ -4,14 +4,14 @@
     "children": [
       {
         "name": "Inter-ACE 2017",
-        "url": "/interace-2017.html",
+        "url": "interace-2017.html",
         "icon": "img/interace.png",
         "description": "Inter-ACE Team 'Buffer Underrun'",
         "backing": "#101010"
       },
       {
         "name": "C2C 2017",
-        "url": "/c2c-2017.html",
+        "url": "c2c-2017.html",
         "icon": "img/c2c.png",
         "description": "Cambridge 2 Cambridge Cyber Security Challenge [July 2017]",
         "backing": "#ccc"
@@ -23,7 +23,7 @@
     "children": [
       {
         "name": "UROP (Summer 2016)",
-        "url": "https://www.jrtapsell.co.uk/urop-2016.html",
+        "url": "urop-2016.html",
         "icon": "img/rhul.jpg",
         "description": "Eclipse plugin for the ART parser generator",
         "backing": "#202A30"
