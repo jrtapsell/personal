@@ -28,7 +28,13 @@ gulp.task('pages', function () {
     .pipe(handlebars(null, {
       ignorePartials: false,
       batch: ['src/partials'],
-      compile: {strict: true}
+      compile: {strict: true},
+      helpers: {
+        "load_file": function (filename, options) {
+          var data = require("./src/data/" + filename);
+          return new handlebars.Handlebars.SafeString(options.fn(data));
+        }
+      }
     }))
     .pipe(rename({
       extname: ".html"

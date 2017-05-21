@@ -34,6 +34,11 @@
         "icon": "img/tu6pm.jpg",
         "description": "TU6PM (Royal Holloway, University of London CTF Team)",
         "backing": "#000308"
+      },
+      {
+        "name": "Mini Projects",
+        "description": "My small mini projects",
+        "url": "mini-projects.html"
       }
     ]
   },

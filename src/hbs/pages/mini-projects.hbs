@@ -1,0 +1,27 @@
+{{#*inline "single_content"}}
+<p>
+    Tools on this page are little tools I put together, I try to keep them up to date, so if there are issues then please
+    feel free to contact me about them.
+</p>
+{{#load_file "mini-projects.json"}}
+        <div class="card-container mdl-grid">
+            {{#each this}}
+                <a href="{{url}}" rel="noopener" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col link-card">
+                    <div class="image-wrapper"
+                         style="background: {{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}};">
+                        <div class="mdl-card__title"
+                             {{#if icon}}style="background: url('{{{icon}}}') center center / contain no-repeat;"{{/if}}>
+                            <h3 class="mdl-card__title-text card-title">{{name}}</h3>
+                        </div>
+                    </div>
+                    <div class="mdl-card__supporting-text">{{description}}</div>
+                </a>
+            {{/each}}
+        </div>
+{{/load_file}}
+{{/inline}}
+{{> layout/single
+title_short = "Mini Projects"
+title="Mini Projects | James Tapsell"
+description="Mini projects by James Tapsell (jrtapsell)"
+url="https://www.jrtapsell.co.uk/mini-projects.html"}}
