@@ -1,0 +1,25 @@
+[{
+        "name": "Facebook",
+        "url": "https://www.facebook.com/jrtapsell",
+        "icon": "facebook"
+}, {
+        "name": "Telegram",
+        "url": "https://telegram.me/jrtapsell",
+        "icon": "telegram"
+}, {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jrtapsell/",
+        "icon": "linkedin"
+}, {
+        "name": "GitHub",
+        "url": "https://github.com/jrtapsell",
+        "icon": "github"
+}, {
+        "name": "Keybase",
+        "url": "https://keybase.io/jrtapsell",
+        "icon": "keybase"
+}, {
+        "name": "Twitter",
+        "url": "https://www.twitter.com/jrtapsell",
+        "icon": "twitter"
+}]

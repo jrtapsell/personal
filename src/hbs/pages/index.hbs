@@ -6,11 +6,11 @@
 "name" : "James Tapsell",
 "url" : "https://www.jrtapsell.co.uk",
 "sameAs" : [
-"https://www.facebook.com/jrtapsell",
-"https://telegram.me/jrtapsell",
-"https://www.linkedin.com/in/jrtapsell/",
-"https://github.com/jrtapsell",
-"https://twitter.com/jrtapsell"
+{{#load_file "social.json"}}
+    {{#each this}}
+        "{{url}}"{{#unless @last}},{{/unless}}
+    {{/each}}
+{{/load_file}}
 ],
 "email": "contact@jrtapsell.co.uk",
 "image": "https://www.jrtapsell.co.uk/img/icon512.jpg"
