@@ -9,19 +9,6 @@ var sitemap = require('gulp-sitemap');
 var aws = require( 'gulp-awspublish' );
 var gutil = require('gulp-util');
 
-gulp.task('render', function () {
-  var templateData = require("./src/data/data.json");
-
-  return gulp.src('src/hbs/index.hbs')
-    .pipe(handlebars({"items":templateData}, {
-      ignorePartials: false,
-      batch: ['src/partials']
-    }))
-    .pipe(rename('index.html'))
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('dist'));
-});
-
 
 gulp.task('pages', function () {
   return gulp.src('src/hbs/pages/*.hbs')
@@ -146,5 +133,5 @@ gulp.task('aws', () => {
 });
 
 
-gulp.task('default', gulp.series('render', 'css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
+gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
 gulp.task('deploy', gulp.series('default', 'aws'));

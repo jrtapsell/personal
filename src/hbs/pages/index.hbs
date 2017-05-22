@@ -37,8 +37,9 @@
         </div>
     </div>
 </div>
+{{#load_file "data.json"}}
 <div id="target">
-    {{#each items}}
+    {{#each this}}
         <h2 id="{{name}}">{{name}}</h2>
         {{#with children}}
             <div class="card-container mdl-grid">
@@ -47,7 +48,7 @@
                         <div class="image-wrapper"
                              style="background: {{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}};">
                             <div class="mdl-card__title"
-                                 style="background: url('{{{icon}}}') center center / contain no-repeat;">
+                                 {{#if icon}}style="background: url('{{{icon}}}') center center / contain no-repeat;"{{/if}}>
                                 <h3 class="mdl-card__title-text card-title">{{name}}</h3>
                             </div>
                         </div>
@@ -58,6 +59,7 @@
         {{/with}}
     {{/each}}
 </div>
+{{/load_file}}
 {{/inline}}
 {{> layout/base
     title="James Tapsell"
