@@ -21,6 +21,7 @@ a.mdl-navigation__link {
 h2 {
     text-align: center;
     background: #ddd;
+    background: linear-gradient(to right, #777d84 , #ccc, #777d84);
     font-size: 3em;
 }
 .mdl-card__title {
