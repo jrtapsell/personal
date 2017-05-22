@@ -41,6 +41,7 @@ h2 {
 
 .page-content>h1 {
     background: #ddd;
+    background: linear-gradient(to right, #777d84 , #ccc, #777d84);
     text-align: center;
 }
 
