@@ -2,16 +2,19 @@
   "dns": {
     "name": "DNS comparison tool",
     "description": "Compare DNS providers by supported records",
-    "url": "https://dns.jrtapsell.co.uk"
+    "url": "https://dns.jrtapsell.co.uk",
+    "icon": "img/dns.svg"
   },
   "food": {
     "name": "RHUL food finder",
     "description": "Tool to find places on campus at Royal Holloway where you can get food",
-    "url": "https://food.jrtapsell.co.uk"
+    "url": "https://food.jrtapsell.co.uk",
+    "icon": "img/food.svg"
   },
   "badger": {
     "name": "Badger",
     "description": "Simple interactive tool for making shields.io badges",
-    "url": "https://badger.jrtapsell.co.uk"
+    "url": "https://badger.jrtapsell.co.uk",
+    "icon": "img/badger.svg"
   }
 }
