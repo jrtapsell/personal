@@ -58,11 +58,6 @@ gulp.task('mdl-css', function() {
     .pipe(gulp.dest("dist/res/mdl"));
 });
 
-gulp.task('mdl-js', function() {
-  return gulp.src('src/res/mdl/material.min.js')
-    .pipe(gulp.dest("dist/res/mdl"))
-});
-
 gulp.task('js', function() {
   return gulp.src('src/js/*.js')
     .pipe(gulp.dest("dist/js"))
@@ -133,5 +128,5 @@ gulp.task('aws', () => {
 });
 
 
-gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'mdl-js', 'manifest', 'make-sw', 'sitemap'));
+gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'manifest', 'make-sw', 'sitemap'));
 gulp.task('deploy', gulp.series('default', 'aws'));
