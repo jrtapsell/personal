@@ -75,11 +75,6 @@ gulp.task('extra', function(){
     .pipe(gulp.dest("dist"))
 });
 
-gulp.task('ga', function () {
-  return download('https://www.google-analytics.com/analytics.js')
-    .pipe(gulp.dest("dist/res/ga/"))
-});
-
 gulp.task('make-sw', function(callback) {
   var path = require('path');
   var swPrecache = require('sw-precache');
@@ -128,5 +123,5 @@ gulp.task('aws', () => {
 });
 
 
-gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'ga', 'pages', 'mdl-css', 'manifest', 'make-sw', 'sitemap'));
+gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'pages', 'mdl-css', 'manifest', 'make-sw', 'sitemap'));
 gulp.task('deploy', gulp.series('default', 'aws'));
