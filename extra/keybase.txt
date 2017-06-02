@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/jrtapsell
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.jrtapsell.co.uk
+  * I am jrtapsell (https://keybase.io/jrtapsell) on keybase.
+  * I have a public key ASC7gGxkeVYj7nQimJMLC3ehTN660yWIp2JHDTygfaVUXQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01207af1adc98abe62a499ed441967ee936f089df0f7202a6d5800376fae6604cf950a",
+            "host": "keybase.io",
+            "kid": "0120bb806c64795623ee742298930b0b77a14cdebad32588a762470d3ca07da5545d0a",
+            "uid": "c54337b7c45fa3b2216bf47818cc5c19",
+            "username": "jrtapsell"
+        },
+        "service": {
+            "hostname": "www.jrtapsell.co.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.23"
+    },
+    "ctime": 1496418375,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1496418356,
+        "hash": "b4026a58432f5d3a8d06597a06e2d569b1bb9ea553f4fa81cb0dd51068df211b769977bf4cb3570ff50034a000b9d06e8f09f051ba7781c635bb60dcfe44d042",
+        "seqno": 1138020
+    },
+    "prev": "e04d6f94684ea3985751c961166f81141dc3934037aa27c51130baea70263b3e",
+    "seqno": 17,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgu4BsZHlWI+50IpiTCwt3oUzeutMliKdiRw08oH2lVF0Kp3BheWxvYWTFAv57ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwN2FmMWFkYzk4YWJlNjJhNDk5ZWQ0NDE5NjdlZTkzNmYwODlkZjBmNzIwMmE2ZDU4MDAzNzZmYWU2NjA0Y2Y5NTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYmI4MDZjNjQ3OTU2MjNlZTc0MjI5ODkzMGIwYjc3YTE0Y2RlYmFkMzI1ODhhNzYyNDcwZDNjYTA3ZGE1NTQ1ZDBhIiwidWlkIjoiYzU0MzM3YjdjNDVmYTNiMjIxNmJmNDc4MThjYzVjMTkiLCJ1c2VybmFtZSI6ImpydGFwc2VsbCJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoid3d3LmpydGFwc2VsbC5jby51ayIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjIzIn0sImN0aW1lIjoxNDk2NDE4Mzc1LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0OTY0MTgzNTYsImhhc2giOiJiNDAyNmE1ODQzMmY1ZDNhOGQwNjU5N2EwNmUyZDU2OWIxYmI5ZWE1NTNmNGZhODFjYjBkZDUxMDY4ZGYyMTFiNzY5OTc3YmY0Y2IzNTcwZmY1MDAzNGEwMDBiOWQwNmU4ZjA5ZjA1MWJhNzc4MWM2MzViYjYwZGNmZTQ0ZDA0MiIsInNlcW5vIjoxMTM4MDIwfSwicHJldiI6ImUwNGQ2Zjk0Njg0ZWEzOTg1NzUxYzk2MTE2NmY4MTE0MWRjMzkzNDAzN2FhMjdjNTExMzBiYWVhNzAyNjNiM2UiLCJzZXFubyI6MTcsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAec4LLw1/eYzupb0hsyAwfnlhVnlfMDzBYqmY3cp1htOtXngz0MJh1W3IMnPpZDPC6Gsu8siaz9z/n08KDInXBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHPFXUk73Me1X7qcYckICuu4Cc4MOifqUaJzvwlPJObio3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jrtapsell
+
+==================================================================
