@@ -44,14 +44,14 @@
         {{#with children}}
             <div class="card-container mdl-grid">
                 {{#each this}}
-                    <a href="{{url}}" rel="noopener" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col link-card">
+                    <a {{#if url}}href="{{url}}"{{/if}} rel="noopener" class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col link-card">
                         <div class="image-wrapper" data-background="{{#if backing}}{{backing}}{{else}}#2d3a4a{{/if}}">
                             <div class="mdl-card__title" {{#if icon}}data-background="url('{{{icon}}}') center center / contain no-repeat"{{/if}}>
                                 <h3 class="mdl-card__title-text card-title">{{name}}</h3>
                             </div>
                         </div>
                         <div class="mdl-card__supporting-text">{{description}}</div>
-                    </a>
+                    {{#if url}}</a>{{/if}}
                 {{/each}}
             </div>
         {{/with}}

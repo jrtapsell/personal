@@ -29,6 +29,12 @@
         "backing": "#202A30"
       },
       {
+        "name": "UROP (Summer 2017)",
+        "icon": "img/rhul.jpg",
+        "description": "Blockchain to provide Data Provenance Integrity and Privacy",
+        "backing": "#202A30"
+      },
+      {
         "name": "CTF Team",
         "url": "https://www.tu6.pm",
         "icon": "img/tu6pm.jpg",
@@ -88,6 +94,12 @@
         "name": "PGP keys",
         "description": "My PGP keys",
         "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661",
+        "icon": "img/key.png"
+      },
+      {
+        "name": "Keybase",
+        "description": "My Keybase Account",
+        "url": "http://keybase.io/jrtapsell",
         "icon": "img/key.png"
       }
     ]
