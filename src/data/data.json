@@ -32,7 +32,8 @@
         "name": "UROP (Summer 2017)",
         "icon": "img/rhul.jpg",
         "description": "Blockchain to provide Data Provenance Integrity and Privacy",
-        "backing": "#202A30"
+        "backing": "#202A30",
+        "url": "urop-2017-bc.html"
       },
       {
         "name": "CTF Team",
