@@ -101,7 +101,8 @@
         "name": "Keybase",
         "description": "My Keybase Account",
         "url": "http://keybase.io/jrtapsell",
-        "icon": "img/key.png"
+        "icon": "img/keybase.png",
+        "backing": "#4d449c"
       }
     ]
   }
