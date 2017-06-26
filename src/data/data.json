@@ -15,6 +15,11 @@
         "icon": "img/c2c.png",
         "description": "Cambridge 2 Cambridge Cyber Security Challenge [July 2017]",
         "backing": "#ccc"
+      },
+      {
+        "name": "Other events",
+        "url": "other-events.html",
+        "description": "Other events I have attended"
       }
     ]
   },

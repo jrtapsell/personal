@@ -1,0 +1,38 @@
+{{#*inline "single_content"}}
+<p>
+    Events on this page are events I have attended which I have not created a page for.
+</p>
+{{#load_file "other-events.json"}}
+        <table class="mdl-data-table mdl-cell mdl-cell--12-col">
+            <tr>
+                <th>
+                    Date
+                </th>
+                <th>
+                    Event
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            {{#each this}}
+                <tr>
+                    <td>
+                        {{date}}
+                    </td>
+                    <td>
+                        {{name}}
+                    </td>
+                    <td>
+                        {{description}}
+                    </td>
+                </tr>
+            {{/each}}
+        </table>
+{{/load_file}}
+{{/inline}}
+{{> layout/single
+title_short = "Other Events"
+title="Other Events | James Tapsell"
+description="Other events I have attended"
+url="https://www.jrtapsell.co.uk/other-events.html"}}
