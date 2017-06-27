@@ -16,7 +16,7 @@ function stateChange(newState) {
 function onSwStateChange(installingWorker) {
   return function() {
     stateChange(installingWorker.state);
-  }
+  } 
 }
 
 function onSwUpdate(reg) {

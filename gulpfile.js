@@ -97,31 +97,5 @@ gulp.task('sitemap', function () {
 });
 
 
-var key = process.env.AWS_ACCESS_KEY_ID;
-var secret = process.env.AWS_SECRET_ACCESS_KEY;
 
-gutil.log(key);
-gutil.log(secret);
-
-gulp.task('aws', () => {
-  var publisher = aws.create({
-    region: 'eu-west-2',
-    params: {
-      Bucket: "wwwjrtapsellcouk",
-    },
-    accessKeyId: key,
-    secretAccessKey: secret
-  });
-
-  var headers = {
-    'Cache-Control': 'max-age=315360000, no-transform, public'
-  };
-  return gulp.src('./dist/**')
-    .pipe(publisher.publish(headers))
-    .pipe(publisher.cache())
-    .pipe(aws.reporter());
-});
-
-
-gulp.task('default', gulp.series('css', 'js', 'img', 'extra', 'font', 'pages', 'mdl-css', 'manifest', 'make-sw', 'sitemap'));
-gulp.task('deploy', gulp.series('default', 'aws'));
+gulp.task('default', gulp.series('css', 'js', 'img', 'font', 'pages', 'mdl-css', 'manifest', 'make-sw', 'sitemap',  'extra'));
