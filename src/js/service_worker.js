@@ -1,25 +1,28 @@
-function onSwStateChange(state) {
-  return function() {
-    switch (state) {
-      case 'installed':
-        if (navigator.serviceWorker.controller) {
-          console.log('New or updated content is available.');
-        } else {
-          console.log('Content is now available offline!');
-        }
-        break;
+function stateChange(newState) {
+  switch (newState) {
+    case 'installed':
+      if (navigator.serviceWorker.controller) {
+        console.log('New or updated content is available.');
+      } else {
+        console.log('Content is now available offline!');
+      }
+      break;
 
-      case 'redundant':
-        console.error('The installing service worker became redundant.');
-        break;
-    }
+    case 'redundant':
+      console.error('The installing service worker became redundant.');
+      break;
+  }
+}
+function onSwStateChange(installingWorker) {
+  return function() {
+    stateChange(installingWorker.state);
   }
 }
 
 function onSwUpdate(reg) {
   return function () {
     var installingWorker = reg.installing;
-    installingWorker.onstatechange = onSwStateChange(installingWorker.state);
+    installingWorker.onstatechange = onSwStateChange(installingWorker);
   }
 }
 
