@@ -97,3 +97,7 @@ blockquote:before {
 blockquote:after {
     content: "";
 }
+
+iframe {
+    height: 64vh;
+}
