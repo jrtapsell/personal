@@ -15,9 +15,18 @@
         padding: 0 16px 0 16px;
     }
 }
-a.mdl-navigation__link {
-    font-size: 1.3em;
+@media screen and (max-width: 350px) {
+    a.mdl-navigation__link {
+        font-size: 1em;
+    }
 }
+
+@media screen and (min-width: 350px) {
+    a.mdl-navigation__link {
+        font-size: 1.3em;
+    }
+}
+
 h2 {
     text-align: center;
     background: #ddd;
