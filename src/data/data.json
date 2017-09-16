@@ -92,14 +92,14 @@
     "children": [
       {
         "name": "SSH keys",
-        "url": "http://vps.jrtapsell.co.uk",
+        "url": "/ssh.html",
         "description": "My SSH keys",
         "icon": "img/key.png"
       },
       {
         "name": "PGP keys",
         "description": "My PGP keys",
-        "url": "http://keyserver1.pgp.com/vkd/DownloadKey.event?keyid=0x4E11DEE0984EB661",
+        "url": "/pgp.asc",
         "icon": "img/key.png"
       },
       {

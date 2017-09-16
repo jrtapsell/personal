@@ -110,3 +110,9 @@ blockquote:after {
 iframe {
     height: 64vh;
 }
+
+
+pre {
+    overflow-x: scroll;
+    max-width: 100vw;
+}
