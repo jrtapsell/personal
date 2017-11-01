@@ -35,7 +35,7 @@
         "header": "true"
 }, {
         "name": "ORCID",
-        "url": "httpsc://orcid.org/0000-0002-1213-3375"
+        "url": "https://orcid.org/0000-0002-1213-3375"
 }, {
         "name": "ResearcherID",
         "url": "https://www.researcherid.com/rid/S-3593-2017"
