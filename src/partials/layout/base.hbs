@@ -39,7 +39,9 @@
             <nav class="mdl-navigation" id="linksbar">
                 {{#load_file "social.json"}}
                     {{#each this}}
+                        {{#if header}}
                         <a rel="me" href="{{url}}" class="mdl-navigation__link"><i class="icon-{{icon}}" aria-hidden="true" title="{{name}}"></i></a>
+                        {{/if}}
                     {{/each}}
                 {{/load_file}}
             </nav>
