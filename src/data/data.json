@@ -84,6 +84,11 @@
         "description": "Article hosting",
         "icon": "img/medium.png",
         "backing": "#1e4a32"
+      },
+      {
+        "name": "Profiles",
+        "url": "profiles.html",
+        "description": "All my profiles"
       }
     ]
   },

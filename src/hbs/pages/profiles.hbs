@@ -1,0 +1,26 @@
+{{#*inline "single_content"}}
+A list of my active accounts.
+{{#load_file "social.json"}}
+        <table class="mdl-data-table mdl-cell mdl-cell--12-col">
+            <tr>
+                <th>
+                    Account
+                </th>
+                <th>
+                    Link
+                </th>
+            </tr>
+            {{#each this}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td><a href="{{url}}" rel="me"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Open</button></a></td>
+                </tr>
+            {{/each}}
+        </table>
+{{/load_file}}
+{{/inline}}
+{{> layout/single
+title_short = "Profiles"
+title="Profiles | James Tapsell"
+description="A list of my social profiles"
+url="https://www.jrtapsell.co.uk/profiles.html"}}
