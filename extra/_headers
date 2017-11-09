@@ -6,3 +6,4 @@
     x-content-type-options: nosniff
     x-frame-options: DENY
     x-xss-protection: 1; mode=block
+    Expect-CT: max-age=0, report-uri="https://jrtapsell.report-uri.com/r/d/ct/reportOnly"
