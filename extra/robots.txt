@@ -1,1 +1,2 @@
 sitemap: https://www.jrtapsell.co.uk/sitemap.xml
+Disallow: /404.html
