@@ -1,6 +1,6 @@
 /*
     content-security-policy: report-uri https://jrtapsell.report-uri.io/r/default/csp/enforce; default-src 'self'; connect-src 'self'; script-src 'self' www.google-analytics.com; style-src 'self'; img-src 'self' www.google-analytics.com stats.g.doubleclick.net; font-src 'self'; frame-src www.youtube.com player.vimeo.com docs.google.com; manifest-src 'self'
-    referrer-policy: strict-origin-when-cross-origin:
+    referrer-policy: strict-origin-when-cross-origin
     server: Jrtapsell
     ##strict-transport-security: max-age=31536000; includeSubdomains; preload
     x-content-type-options: nosniff
