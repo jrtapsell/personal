@@ -97,14 +97,14 @@
     "children": [
       {
         "name": "SSH keys",
-        "url": "/ssh.html",
+        "url": "https://jrtapsell.keybase.pub/keys/ssh/public",
         "description": "My SSH keys",
         "icon": "img/key.png"
       },
       {
         "name": "PGP keys",
         "description": "My PGP keys",
-        "url": "/pgp.asc",
+        "url": "https://keybase.io/jrtapsell/pgp_keys.asc",
         "icon": "img/key.png"
       },
       {
