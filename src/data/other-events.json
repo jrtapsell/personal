@@ -8,5 +8,10 @@
     "name": "C2C Pentesting Skills Workshop",
     "description": "A whole day skills workshop on penetration testing ran by Cambridge university",
     "date": "25th June 2017"
+  },
+  {
+    "name": "London Metropolitan CTF",
+    "description": "A CTF at London Metropolitan University, where the 2 Royal Holloway teams came 1st and 2nd",
+    "date": "30th November 2017"
   }
 ]
