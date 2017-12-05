@@ -1,2 +1,2 @@
 exclude_paths:
-  - src/res/*
+  - src/res/mdl/custom.css
