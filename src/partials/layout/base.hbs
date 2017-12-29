@@ -21,6 +21,11 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#2d3a4a">
 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@jrtapsell" />
+    <meta name="twitter:site" content="@jrtapsell" />
+    <meta name="twitter:title" content="{{description}}" />
+
     {{#> ld_json}}{{/ld_json}}
     <script async src="js/ga.js"></script>
     <link rel="icon" type="image/png" href="img/icon64.jpg">
@@ -48,7 +53,9 @@
                 {{#load_file "social.json"}}
                     {{#each this}}
                         {{#if header}}
-                        <a rel="me" href="{{url}}" class="mdl-navigation__link"><i class="icon-{{icon}}" aria-hidden="true" title="{{name}}"></i></a>
+                        <a rel="me" href="{{url}}" class="mdl-navigation__link profile" data-username="{{username}}">
+                            <i class="icon-{{icon}}" aria-hidden="true" title="{{name}}"></i>
+                        </a>
                         {{/if}}
                     {{/each}}
                 {{/load_file}}

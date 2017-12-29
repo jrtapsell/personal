@@ -116,3 +116,30 @@ pre {
     overflow-x: scroll;
     max-width: 100vw;
 }
+
+@media print {
+    a.profile[href]:after {
+        content: attr(data-username);
+    }
+    a.profile {
+        padding: 0.3em !important;
+    }
+
+    header.mdl-layout__header {
+        background: transparent;
+        color: black;
+    }
+    body {
+        background: transparent;
+    }
+
+    .mdl-layout__header-row .mdl-navigation__link {
+        color: black;
+    }
+
+    .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--4-col.link-card {
+        page-break-inside: avoid;
+    }
+
+
+}

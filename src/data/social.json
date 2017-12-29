@@ -2,41 +2,50 @@
         "name": "Facebook",
         "url": "https://www.facebook.com/jrtapsell",
         "icon": "facebook",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "Telegram",
         "url": "https://telegram.me/jrtapsell",
         "icon": "telegram",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "LinkedIn",
         "url": "https://www.linkedin.com/in/jrtapsell/",
         "icon": "linkedin",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "GitHub",
         "url": "https://github.com/jrtapsell",
         "icon": "github",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "Keybase",
         "url": "https://keybase.io/jrtapsell",
         "icon": "keybase",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "Twitter",
         "url": "https://www.twitter.com/jrtapsell",
         "icon": "twitter",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "Stack Exchange",
         "url": "https://stackoverflow.com/users/8041461",
         "icon": "stackexchange",
-        "header": "true"
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "ORCID",
-        "url": "https://orcid.org/0000-0002-1213-3375"
+        "url": "https://orcid.org/0000-0002-1213-3375",
+        "username": "0000-0002-1213-3375"
 }, {
         "name": "ResearcherID",
-        "url": "https://www.researcherid.com/rid/S-3593-2017"
+        "url": "https://www.researcherid.com/rid/S-3593-2017",
+        "username": "S-3593-2017"
 }]
