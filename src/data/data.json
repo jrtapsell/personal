@@ -17,6 +17,11 @@
         "backing": "#ccc"
       },
       {
+        "name": "Royal Hackaway 2018",
+        "url": "royalhackaway2018.html",
+        "description": "Royal Hackaway 2018 Hackathon"
+      },
+      {
         "name": "Other events",
         "url": "other-events.html",
         "description": "Other events I have attended"
