@@ -16,5 +16,10 @@
     "description": "Simple interactive tool for making shields.io badges",
     "url": "https://badger.jrtapsell.co.uk",
     "icon": "img/badger.svg"
+  },
+  "checkspf": {
+    "name": "SPF Record Checker",
+    "description": "A simple site that lets you check your SPF record.",
+    "url": "https://www.checkspf.net"
   }
 }
