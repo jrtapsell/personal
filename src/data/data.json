@@ -3,6 +3,13 @@
     "name": "Events",
     "children": [
       {
+        "name": "Inter-ACE 2018",
+        "url": "interace-2018.html",
+        "icon": "img/interace.png",
+        "description": "Inter-ACE Team 'TU6PM'",
+        "backing": "#101010"
+      },
+      {
         "name": "Inter-ACE 2017",
         "url": "interace-2017.html",
         "icon": "img/interace.png",
