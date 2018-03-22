@@ -3,11 +3,9 @@ const handlebars = require("gulp-compile-handlebars");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const cleanCSS = require("gulp-clean-css");
-const download = require("gulp-download");
 const gulpIgnore = require("gulp-ignore");
-const sitemap = require("gulp-sitemap");
-const aws = require( "gulp-awspublish" );
-const gutil = require("gulp-util");
+const siteMap = require("gulp-sitemap");
+const serviceWorker = require("sw-precache");
 
 
 gulp.task("pages", function () {
@@ -18,7 +16,7 @@ gulp.task("pages", function () {
       compile: {strict: true},
       helpers: {
         "load_file": function (filename, options) {
-          var data = require("./src/data/" + filename);
+          const data = require("./src/data/" + filename);
           return new handlebars.Handlebars.SafeString(options.fn(data));
         }
       }
@@ -76,10 +74,7 @@ gulp.task("extra", function(){
 });
 
 gulp.task("make-sw", function(callback) {
-  var path = require("path");
-  var swPrecache = require("sw-precache");
-
-  swPrecache.write("dist/service-worker.js", {
+  serviceWorker.write("dist/service-worker.js", {
     staticFileGlobs: ["dist/**/*"],
     stripPrefix: "dist"
   }, callback);
@@ -90,7 +85,7 @@ gulp.task("sitemap", function () {
       read: false
     })
     .pipe(gulpIgnore.exclude("google*.html"))
-    .pipe(sitemap({
+    .pipe(siteMap({
       siteUrl: "http://www.jrtapsell.co.uk"
     }))
     .pipe(gulp.dest("./dist"));
