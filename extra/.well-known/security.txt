@@ -1,0 +1,6 @@
+Contact: mailto:contact@jrtapsell.co.uk
+Encryption: https://jrtapsell.keybase.pub/keys/gpg/59BA0077
+Acknowledgements: 
+Policy: 
+Signature: https://www.jrtapsell.co.uk/.well-known/security.txt.sig
+Hiring: 
