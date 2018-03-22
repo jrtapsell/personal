@@ -71,7 +71,7 @@ gulp.task("img", function(){
 });
 
 gulp.task("extra", function(){
-  return gulp.src("extra/*")
+  return gulp.src(["extra/*", "extra/.**/*"])
     .pipe(gulp.dest("dist"))
 });
 
