@@ -1,11 +1,7 @@
-FROM alpine
-WORKDIR build
-RUN apk update
-RUN apk add nodejs git
+FROM netlify/build
+WORKDIR /opt/repo
 ADD ./ ./
-RUN npm install --global gulp-cli
-RUN npm install
-RUN gulp
+RUN build gulp
 
 FROM nginx
-COPY --from=0 /build/dist /usr/share/nginx/html
+COPY --from=0 /opt/buildhome/repo/dist /usr/share/nginx/html
