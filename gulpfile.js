@@ -6,6 +6,7 @@ const cleanCSS = require("gulp-clean-css");
 const gulpIgnore = require("gulp-ignore");
 const siteMap = require("gulp-sitemap");
 const serviceWorker = require("sw-precache");
+const imagemin = require('gulp-imagemin');
 
 
 gulp.task("pages", function () {
@@ -65,6 +66,7 @@ gulp.task("js", function() {
 
 gulp.task("img", function(){
   return gulp.src("src/img/*")
+    .pipe(imagemin())
     .pipe(gulp.dest("dist/img"))
 });
 
