@@ -1,3 +1,4 @@
 /404.html  404!
 http://jrtapsell.co.uk/* https://jrtapsell.co.uk/:splat 302
 https://jrtapsell.co.uk/* https://www.jrtapsell.co.uk/:splat 302
+http://www.jrtapsell.co.uk https://www.jrtapsell.co.uk/:splat 302
