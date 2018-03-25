@@ -1,2 +1,3 @@
 #!/bin/bash
-docker build -t website ../
+source source.sh
+build

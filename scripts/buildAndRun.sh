@@ -1,3 +1,4 @@
 #!/bin/bash
-./build.sh &&
-./run.sh
+source source.sh
+build
+run_and_print
