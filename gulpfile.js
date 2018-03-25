@@ -33,7 +33,6 @@ defineTask("css", function () {
  */
 defineTask("js", function () {
   return EXTERNAL.gulp.src("src/js/*.js")
-    .pipe(EXTERNAL.uglify())
     .pipe(EXTERNAL.gulp.dest("dist/js"));
 });
 
