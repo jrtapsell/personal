@@ -7,7 +7,7 @@ const gulpIgnore = require("gulp-ignore");
 const siteMap = require("gulp-sitemap");
 const serviceWorker = require("sw-precache");
 const imagemin = require("gulp-imagemin");
-
+const fs = require('fs');
 
 gulp.task("pages", function () {
   return gulp.src("src/hbs/pages/*.hbs")
@@ -17,7 +17,8 @@ gulp.task("pages", function () {
       compile: {strict: true},
       helpers: {
         "load_file" (filename, options) {
-          const data = require("./src/data/" + filename);
+          const filePath = "./src/data/" + filename;
+          const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           return new handlebars.Handlebars.SafeString(options.fn(data));
         }
       }
@@ -72,7 +73,7 @@ gulp.task("img", function(){
 
 gulp.task("extra", function(){
   return gulp.src(["extra/*", "extra/.**/*"])
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("dist"));
 });
 
 gulp.task("make-sw", function(callback) {

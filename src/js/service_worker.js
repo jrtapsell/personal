@@ -16,14 +16,14 @@ function stateChange(newState) {
 function onSwStateChange(installingWorker) {
   return function() {
     stateChange(installingWorker.state);
-  } 
+  };
 }
 
 function onSwUpdate(reg) {
   return function () {
-    var installingWorker = reg.installing;
+    const installingWorker = reg.installing;
     installingWorker.onstatechange = onSwStateChange(installingWorker);
-  }
+  };
 }
 
 function onSwSuccess(reg) {
