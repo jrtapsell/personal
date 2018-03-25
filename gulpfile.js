@@ -6,7 +6,7 @@ const cleanCSS = require("gulp-clean-css");
 const gulpIgnore = require("gulp-ignore");
 const siteMap = require("gulp-sitemap");
 const serviceWorker = require("sw-precache");
-const imagemin = require('gulp-imagemin');
+const imagemin = require("gulp-imagemin");
 
 
 gulp.task("pages", function () {
@@ -16,7 +16,7 @@ gulp.task("pages", function () {
       batch: ["src/partials"],
       compile: {strict: true},
       helpers: {
-        "load_file": function (filename, options) {
+        "load_file" (filename, options) {
           const data = require("./src/data/" + filename);
           return new handlebars.Handlebars.SafeString(options.fn(data));
         }
@@ -33,7 +33,7 @@ gulp.task("pages", function () {
 gulp.task("css", function(){
   return gulp.src("src/css/index.css")
     .pipe(cleanCSS())
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("dist"));
 });
 
 
@@ -41,13 +41,13 @@ gulp.task("css", function(){
 
 gulp.task("manifest", function(){
   return gulp.src("src/manifest/manifest.json")
-    .pipe(gulp.dest("dist"))
+    .pipe(gulp.dest("dist"));
 });
 
 
 gulp.task("font", function(){
   return gulp.src("src/res/min-font/**")
-    .pipe(gulp.dest("dist/res/min-font"))
+    .pipe(gulp.dest("dist/res/min-font"));
 });
 
 
@@ -59,7 +59,7 @@ gulp.task("mdl-css", function() {
 
 gulp.task("js", function() {
   return gulp.src("src/js/*.js")
-    .pipe(gulp.dest("dist/js"))
+    .pipe(gulp.dest("dist/js"));
 });
 
 
@@ -67,7 +67,7 @@ gulp.task("js", function() {
 gulp.task("img", function(){
   return gulp.src("src/img/*")
     .pipe(imagemin())
-    .pipe(gulp.dest("dist/img"))
+    .pipe(gulp.dest("dist/img"));
 });
 
 gulp.task("extra", function(){
