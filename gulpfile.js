@@ -1,99 +1,105 @@
-const gulp = require("gulp");
-const handlebars = require("gulp-compile-handlebars");
-const rename = require("gulp-rename");
-const htmlmin = require("gulp-htmlmin");
-const cleanCSS = require("gulp-clean-css");
-const gulpIgnore = require("gulp-ignore");
-const siteMap = require("gulp-sitemap");
-const serviceWorker = require("sw-precache");
-const imagemin = require("gulp-imagemin");
-const fs = require('fs');
+const EXTERNAL = {
+  "gulp": require("gulp"),
+  "handlebars": require("gulp-compile-handlebars"),
+  "rename": require("gulp-rename"),
+  "htmlMin": require("gulp-htmlmin"),
+  "cleanCSS": require("gulp-clean-css"),
+  "gulpIgnore": require("gulp-ignore"),
+  "siteMap": require("gulp-sitemap"),
+  "serviceWorker": require("sw-precache"),
+  "imageMin": require("gulp-imagemin"),
+  "fileSystem": require("fs")
+};
 
-gulp.task("pages", function () {
-  return gulp.src("src/hbs/pages/*.hbs")
-    .pipe(handlebars(null, {
+const ALL_TASKS = [];
+
+function defineTask(name, action) {
+  EXTERNAL.gulp.task(name, action);
+  ALL_TASKS.push(name);
+}
+
+
+defineTask("css", function(){
+  return EXTERNAL.gulp.src("src/css/index.css")
+    .pipe(EXTERNAL.cleanCSS())
+    .pipe(EXTERNAL.gulp.dest("dist"));
+});
+
+defineTask("js", function() {
+  return EXTERNAL.gulp.src("src/js/*.js")
+    .pipe(EXTERNAL.gulp.dest("dist/js"));
+});
+
+
+defineTask("img", function(){
+  return EXTERNAL.gulp.src("src/img/*")
+    .pipe(EXTERNAL.imageMin())
+    .pipe(EXTERNAL.gulp.dest("dist/img"));
+});
+
+
+defineTask("font", function(){
+  return EXTERNAL.gulp.src("src/res/min-font/**")
+    .pipe(EXTERNAL.gulp.dest("dist/res/min-font"));
+});
+
+
+defineTask("pages", function () {
+  return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
+    .pipe(EXTERNAL.handlebars(null, {
       ignorePartials: false,
       batch: ["src/partials"],
       compile: {strict: true},
       helpers: {
         "load_file" (filename, options) {
           const filePath = "./src/data/" + filename;
-          const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-          return new handlebars.Handlebars.SafeString(options.fn(data));
+          const data = JSON.parse(EXTERNAL.fileSystem.readFileSync(filePath, 'utf8'));
+          return new EXTERNAL.handlebars.Handlebars.SafeString(options.fn(data));
         }
       }
     }))
-    .pipe(rename({
+    .pipe(EXTERNAL.rename({
       extname: ".html"
     }))
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("dist"));
+    .pipe(EXTERNAL.htmlMin({collapseWhitespace: true}))
+    .pipe(EXTERNAL.gulp.dest("dist"));
 });
 
 
-gulp.task("css", function(){
-  return gulp.src("src/css/index.css")
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("dist"));
+defineTask("mdl-css", function() {
+  return EXTERNAL.gulp.src("src/res/mdl/custom.css")
+    .pipe(EXTERNAL.cleanCSS())
+    .pipe(EXTERNAL.gulp.dest("dist/res/mdl"));
 });
 
-
-
-
-gulp.task("manifest", function(){
-  return gulp.src("src/manifest/manifest.json")
-    .pipe(gulp.dest("dist"));
+defineTask("manifest", function(){
+  return EXTERNAL.gulp.src("src/manifest/manifest.json")
+    .pipe(EXTERNAL.gulp.dest("dist"));
 });
 
-
-gulp.task("font", function(){
-  return gulp.src("src/res/min-font/**")
-    .pipe(gulp.dest("dist/res/min-font"));
-});
-
-
-gulp.task("mdl-css", function() {
-  return gulp.src("src/res/mdl/custom.css")
-    .pipe(cleanCSS())
-    .pipe(gulp.dest("dist/res/mdl"));
-});
-
-gulp.task("js", function() {
-  return gulp.src("src/js/*.js")
-    .pipe(gulp.dest("dist/js"));
-});
-
-
-
-gulp.task("img", function(){
-  return gulp.src("src/img/*")
-    .pipe(imagemin())
-    .pipe(gulp.dest("dist/img"));
-});
-
-gulp.task("extra", function(){
-  return gulp.src(["extra/*", "extra/.**/*"])
-    .pipe(gulp.dest("dist"));
-});
-
-gulp.task("make-sw", function(callback) {
-  serviceWorker.write("dist/service-worker.js", {
+defineTask("make-sw", function(callback) {
+  EXTERNAL.serviceWorker.write("dist/service-worker.js", {
     staticFileGlobs: ["dist/**/*"],
     stripPrefix: "dist"
   }, callback);
 });
 
-gulp.task("sitemap", function () {
-    return gulp.src("dist/*.html", {
-      read: false
-    })
-    .pipe(gulpIgnore.exclude("google*.html"))
-    .pipe(siteMap({
+defineTask("sitemap", function () {
+  return EXTERNAL.gulp.src("dist/*.html", {
+    read: false
+  })
+    .pipe(EXTERNAL.gulpIgnore.exclude("google*.html"))
+    .pipe(EXTERNAL.siteMap({
       siteUrl: "http://www.jrtapsell.co.uk"
     }))
-    .pipe(gulp.dest("./dist"));
+    .pipe(EXTERNAL.gulp.dest("./dist"));
+});
+
+defineTask("extra", function(){
+  return EXTERNAL.gulp.src(["extra/*", "extra/.**/*"])
+    .pipe(EXTERNAL.gulp.dest("dist"));
 });
 
 
 
-gulp.task("default", gulp.series("css", "js", "img", "font", "pages", "mdl-css", "manifest", "make-sw", "sitemap",  "extra"));
+EXTERNAL.gulp.task("default", EXTERNAL.gulp.series(ALL_TASKS));
