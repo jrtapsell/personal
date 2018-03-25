@@ -1,12 +1,12 @@
 #!/bin/bash
 
 function build() {
-    docker build -t website ../;
+    docker build -t website ../
 }
 
 function print_port() {
-    sleep 5;
-    echo "Site is running at: http://$(docker port website 80)";
+    sleep 5
+    echo "Site is running at: http://$(docker port website 80)"
 }
 
 function run_site() {
