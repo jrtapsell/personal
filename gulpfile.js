@@ -111,7 +111,7 @@ defineTask("make-sw", function (callback) {
 defineTask("sitemap", function () {
   return EXTERNAL.gulp.src("dist/*.html", {read: false})
     .pipe(EXTERNAL.siteMap({
-      siteUrl: "http://www.jrtapsell.co.uk"
+      siteUrl: "https://www.jrtapsell.co.uk"
     }))
     .pipe(EXTERNAL.gulp.dest("./dist"));
 });
