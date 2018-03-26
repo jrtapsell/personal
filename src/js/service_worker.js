@@ -2,14 +2,14 @@ function stateChange(newState) {
   switch (newState) {
     case "installed":
       if (navigator.serviceWorker.controller) {
-        console.log("New or updated content is available.");
+        // console.log("New or updated content is available.");
       } else {
-        console.log("Content is now available offline!");
+        // console.log("Content is now available offline!");
       }
       break;
 
     case "redundant":
-      console.error("The installing service worker became redundant.");
+      // console.error("The installing service worker became redundant.");
       break;
   }
 }
@@ -31,7 +31,7 @@ function onSwSuccess(reg) {
 }
 
 function onSwFail(e) {
-  console.error("Error during service worker registration:", e);
+  // console.error("Error during service worker registration:", e);
 }
 
 function onSwLoad() {
