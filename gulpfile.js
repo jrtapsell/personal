@@ -75,7 +75,7 @@ defineTask("pages", function () {
           return new EXTERNAL.handlebars.Handlebars.SafeString(converter.makeHtml(body.fn()))
         },
         "button_bar"(body, context) {
-          var result = '<div class="mdl-cell mdl-cell--12-col">';
+          var result = '<div class="mdl-cell mdl-cell--12-col button-bar">';
           for (i of JSON.parse(body)) {
             result += `<a href="${i[1]}">
     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
