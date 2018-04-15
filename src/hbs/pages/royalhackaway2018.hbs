@@ -9,28 +9,17 @@
         As a team we made SongBird, a tool which uses the spotify API to display data on song popularity over time.
         This was built server side in Kotlin, with the front end made using Vue.js. This won the <em>Amazon Web Services - Best Use of AWS</em> prize.
     </p>
-    <div class="mdl-cell mdl-cell--12-col">
-        <a href="https://mysongbird.xyz/">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Song Bird
-            </button>
-        </a>
-        <a href="https://royalhackaway.xyz/hackaway2018">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Official Website
-            </button>
-        </a>
-        <a href="https://devpost.com/software/songbird-trij8s">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                DevPost post
-            </button>
-        </a>
-        <a href="https://www.overleaf.com/read/rbxsntcgkcwx#/50737089/">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                Presentation
-            </button>
-        </a>
-    </div>
+
+
+
+{{button_bar '[
+    ["Song Bird", "https://mysongbird.xyz/"],
+    ["Official Website", "https://royalhackaway.xyz/hackaway2018"],
+    ["DevPost post", "https://devpost.com/software/songbird-trij8s"],
+    ["Presentation", "https://www.overleaf.com/read/rbxsntcgkcwx#/50737089/"]
+]'
+}}
+
 {{/inline}}
 {{> layout/single
         title_short = "Royal Hackaway 2018"

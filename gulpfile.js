@@ -59,7 +59,7 @@ defineTask("font", function () {
  * Creates all of the site pages
  */
 defineTask("pages", function () {
-  converter = new EXTERNAL.showdown.Converter()
+  converter = new EXTERNAL.showdown.Converter();
   return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
     .pipe(EXTERNAL.handlebars(null, {
       ignorePartials: false,
@@ -73,6 +73,18 @@ defineTask("pages", function () {
         },
         "markdown"(body) {
           return new EXTERNAL.handlebars.Handlebars.SafeString(converter.makeHtml(body.fn()))
+        },
+        "button_bar"(body, context) {
+          var result = '<div class="mdl-cell mdl-cell--12-col">';
+          for (i of JSON.parse(body)) {
+            result += `<a href="${i[1]}">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+        ${i[0]}
+    </button>
+</a>`
+          }
+          result += '</div>';
+          return new EXTERNAL.handlebars.Handlebars.SafeString(result);
         }
       }
     }))

@@ -11,28 +11,14 @@
 <p>
     In the end we finished in 12th place, out of over 30 teams.
 </p>
-<div class="mdl-cell mdl-cell--12-col">
-<a href="https://inter-ace.org/index.html">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Official Website
-    </button>
-</a>
-<a href="https://twitter.com/interacecyber">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Official Twitter
-    </button>
-</a>
-<a href="https://www.theengineer.co.uk/inter-ace-2018-cyber-security/">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        TheEngineer Article
-    </button>
-</a>
-<a href="https://inter-ace.org/inter-ace-2018-top-20">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        Top 20 leaderboard
-    </button>
-</a>
-</div>
+
+{{button_bar '[
+        ["Official Site", "https://inter-ace.org/index.html"],
+        ["Official Twitter", "https://twitter.com/interacecyber"],
+        ["TheEngineer Article", "https://www.theengineer.co.uk/inter-ace-2018-cyber-security/"],
+        ["Top 20 leaderboard", "https://inter-ace.org/inter-ace-2018-top-20"]
+    ]'
+}}
 {{/inline}}
 {{> layout/single
     title_short = "InterACE 2018"
