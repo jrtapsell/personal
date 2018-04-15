@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jrtapsell/personal#readme",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-clean-css": "^3.0.4",
     "gulp-cli": "^2.0.1",

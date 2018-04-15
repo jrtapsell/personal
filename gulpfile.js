@@ -11,6 +11,7 @@ const EXTERNAL = {
   "fileSystem": require("fs"),
   "uglify": require('gulp-uglify'),
   "showdown": require('showdown'),
+  "delete": require('del')
 };
 
 const ALL_TASKS = [];
@@ -20,6 +21,10 @@ function defineTask(name, action) {
   ALL_TASKS.push(name);
 }
 
+
+defineTask("clean", function () {
+  return EXTERNAL.delete("dist")
+});
 /**
  * Optimises the CSS
  */
@@ -58,7 +63,8 @@ defineTask("font", function () {
 /**
  * Creates all of the site pages
  */
-defineTask("pages", function () {
+
+function compileDirectory(sourceDirectory) {
   converter = new EXTERNAL.showdown.Converter();
   return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
     .pipe(EXTERNAL.handlebars(null, {
@@ -93,6 +99,10 @@ defineTask("pages", function () {
     }))
     .pipe(EXTERNAL.htmlMin({collapseWhitespace: true}))
     .pipe(EXTERNAL.gulp.dest("dist"));
+}
+
+defineTask("pages", function () {
+  return compileDirectory("src/hbs/pages/*.hbs")
 });
 
 /**
@@ -131,6 +141,10 @@ defineTask("sitemap", function () {
       siteUrl: "https://www.jrtapsell.co.uk"
     }))
     .pipe(EXTERNAL.gulp.dest("./dist"));
+});
+
+defineTask("ghostPages", function () {
+  return compileDirectory("src/hbs/extra/*.hbs")
 });
 
 /**
