@@ -127,4 +127,4 @@ defineTask("extra", function () {
 /**
  * Creates the default task
  */
-EXTERNAL.gulp.task("default", EXTERNAL.gulp.series(ALL_TASKS));
+  EXTERNAL.gulp.task("default", EXTERNAL.gulp.series(ALL_TASKS));
