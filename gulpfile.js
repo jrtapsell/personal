@@ -9,7 +9,8 @@ const EXTERNAL = {
   "serviceWorker": require("sw-precache"),
   "imageMin": require("gulp-imagemin"),
   "fileSystem": require("fs"),
-  "uglify": require('gulp-uglify')
+  "uglify": require('gulp-uglify'),
+  "showdown": require('showdown'),
 };
 
 const ALL_TASKS = [];
@@ -58,6 +59,7 @@ defineTask("font", function () {
  * Creates all of the site pages
  */
 defineTask("pages", function () {
+  converter = new EXTERNAL.showdown.Converter()
   return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
     .pipe(EXTERNAL.handlebars(null, {
       ignorePartials: false,
@@ -68,6 +70,9 @@ defineTask("pages", function () {
           const filePath = "./src/data/" + filename;
           const data = JSON.parse(EXTERNAL.fileSystem.readFileSync(filePath, "utf8"));
           return new EXTERNAL.handlebars.Handlebars.SafeString(options.fn(data));
+        },
+        "markdown"(body) {
+          return new EXTERNAL.handlebars.Handlebars.SafeString(converter.makeHtml(body.fn()))
         }
       }
     }))
