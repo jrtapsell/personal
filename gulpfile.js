@@ -14,6 +14,17 @@ const EXTERNAL = {
   "delete": require('del')
 };
 
+const classMap = {
+  table: 'mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col'
+};
+
+const bindings = Object.keys(classMap)
+  .map(key => ({
+    type: 'output',
+    regex: new RegExp(`<${key}>`, 'g'),
+    replace: `<${key} class="${classMap[key]}">`
+  }));
+
 EXTERNAL.showdown.setOption("tables", true);
 
 const ALL_TASKS = [];
@@ -67,7 +78,9 @@ defineTask("font", function () {
  */
 
 function compileDirectory(sourceDirectory) {
-  converter = new EXTERNAL.showdown.Converter();
+  converter = new EXTERNAL.showdown.Converter({
+    extensions: [...bindings]
+  });
   return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
     .pipe(EXTERNAL.handlebars(null, {
       ignorePartials: false,

@@ -17,6 +17,13 @@
         "backing": "#101010"
       },
       {
+        "name": "C2C 2018",
+        "url": "c2c-2018.html",
+        "icon": "img/c2c.png",
+        "description": "Cambridge 2 Cambridge Cyber Security Challenge",
+        "backing": "#ccc"
+      },
+      {
         "name": "C2C 2017",
         "url": "c2c-2017.html",
         "icon": "img/c2c.png",
