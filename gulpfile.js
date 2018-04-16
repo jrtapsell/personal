@@ -14,6 +14,8 @@ const EXTERNAL = {
   "delete": require('del')
 };
 
+EXTERNAL.showdown.setOption("tables", true);
+
 const ALL_TASKS = [];
 
 function defineTask(name, action) {
@@ -79,6 +81,9 @@ function compileDirectory(sourceDirectory) {
         },
         "markdown"(body) {
           return new EXTERNAL.handlebars.Handlebars.SafeString(converter.makeHtml(body.fn()))
+        },
+        "toId"(body) {
+          return new EXTERNAL.handlebars.Handlebars.SafeString(body.toLowerCase().replace(" ", "_"))
         },
         "button_bar"(body, context) {
           var result = '<div class="mdl-cell mdl-cell--12-col button-bar">';

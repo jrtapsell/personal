@@ -147,3 +147,9 @@ pre {
 .button-bar {
     text-align: center;
 }
+
+.mdl-mini-footer--link-list a, .mdl-mini-footer__link-list a {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+}

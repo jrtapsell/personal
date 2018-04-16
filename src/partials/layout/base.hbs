@@ -52,8 +52,8 @@
                 {{#load_file "social.json"}}
                     {{#each this}}
                         {{#if header}}
-                        <a rel="me" href="{{url}}" class="mdl-navigation__link profile" data-username="{{username}}">
-                            <i class="icon-{{icon}}" aria-hidden="true" title="{{name}}"></i>
+                        <a id="social_a_{{toId name}}" rel="me" href="{{url}}" class="mdl-navigation__link profile" data-username="{{username}}" aria-labelledby="social_i_{{toId name}}">
+                            <i id="social_i_{{toId name}}" class="icon-{{icon}}" aria-hidden="true" title="{{name}}" aria-label="{{name}}"></i>
                         </a>
                         {{/if}}
                     {{/each}}
