@@ -16,11 +16,10 @@ const bindings = Object.keys(classMap)
     replace: `<${key} class="${classMap[key]}">`
   }));
 
+EXTERNAL.showdown.setOption("tables", true);
 const converter = new EXTERNAL.showdown.Converter({
   extensions: [...bindings]
 });
-
-EXTERNAL.showdown.setOption("tables", true);
 
 function safeString(unsafe) {
   return new EXTERNAL.handlebars.Handlebars.SafeString(unsafe);
