@@ -23,7 +23,7 @@ function defineTask(name, action) {
 
 
 defineTask("clean", function () {
-  return EXTERNAL.delete("dist")
+  return EXTERNAL.delete("dist");
 });
 /**
  * Optimises the CSS
