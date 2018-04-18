@@ -8,24 +8,11 @@ const EXTERNAL = {
   "siteMap": require("gulp-sitemap"),
   "serviceWorker": require("sw-precache"),
   "imageMin": require("gulp-imagemin"),
-  "fileSystem": require("fs"),
   "uglify": require('gulp-uglify'),
-  "showdown": require('showdown'),
-  "delete": require('del')
+  "delete": require('del'),
+  "myhelpers": require('./handlebars/helpers')
 };
 
-const classMap = {
-  table: 'mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col'
-};
-
-const bindings = Object.keys(classMap)
-  .map(key => ({
-    type: 'output',
-    regex: new RegExp(`<${key}>`, 'g'),
-    replace: `<${key} class="${classMap[key]}">`
-  }));
-
-EXTERNAL.showdown.setOption("tables", true);
 
 const ALL_TASKS = [];
 
@@ -78,48 +65,12 @@ defineTask("font", function () {
  */
 
 function compileDirectory(sourceDirectory) {
-  converter = new EXTERNAL.showdown.Converter({
-    extensions: [...bindings]
-  });
-  return EXTERNAL.gulp.src("src/hbs/pages/*.hbs")
+  return EXTERNAL.gulp.src(sourceDirectory)
     .pipe(EXTERNAL.handlebars(null, {
       ignorePartials: false,
       batch: ["src/partials"],
       compile: {strict: true},
-      helpers: {
-        "load_file"(filename, options) {
-          const filePath = "./src/data/" + filename;
-          const data = JSON.parse(EXTERNAL.fileSystem.readFileSync(filePath, "utf8"));
-          return new EXTERNAL.handlebars.Handlebars.SafeString(options.fn(data));
-        },
-        "markdown"(body) {
-          return new EXTERNAL.handlebars.Handlebars.SafeString(converter.makeHtml(body.fn()))
-        },
-        "toId"(body) {
-          return new EXTERNAL.handlebars.Handlebars.SafeString(body.toLowerCase().replace(" ", "_"))
-        },
-        "youtube"(id) {
-          return new EXTERNAL.handlebars.Handlebars.SafeString(`<iframe src="https://www.youtube.com/embed/${id}" frameborder="0" allowfullscreen></iframe>`)
-        },
-        "vimeo"(id) {
-          return new EXTERNAL.handlebars.Handlebars.SafeString(`<iframe src="https://player.vimeo.com/video/${id}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>`)
-        },
-        "pdf"(id) {
-          return new EXTERNAL.handlebars.Handlebars.SafeString(`<iframe src="https://docs.google.com/gview?url=${id}&embedded=true" frameborder="0"></iframe>`)
-        },
-        "button_bar"(body, context) {
-          var result = '<div class="mdl-cell mdl-cell--12-col button-bar">';
-          for (i of JSON.parse(body)) {
-            result += `<a href="${i[1]}">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-        ${i[0]}
-    </button>
-</a>`
-          }
-          result += '</div>';
-          return new EXTERNAL.handlebars.Handlebars.SafeString(result);
-        }
-      }
+      helpers: EXTERNAL.myhelpers.helpers
     }))
     .pipe(EXTERNAL.rename({
       extname: ".html"
