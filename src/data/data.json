@@ -55,18 +55,18 @@
         "backing": "#202A30"
       },
       {
-        "name": "UROP (Summer 2016)",
-        "url": "urop-2016.html",
-        "icon": "img/rhul.jpg",
-        "description": "Eclipse plugin for the ART parser generator",
-        "backing": "#202A30"
-      },
-      {
         "name": "UROP (Summer 2017)",
         "icon": "img/rhul.jpg",
         "description": "Blockchain to provide Data Provenance Integrity and Privacy",
         "backing": "#202A30",
         "url": "urop-2017-bc.html"
+      },
+      {
+        "name": "UROP (Summer 2016)",
+        "url": "urop-2016.html",
+        "icon": "img/rhul.jpg",
+        "description": "Eclipse plugin for the ART parser generator",
+        "backing": "#202A30"
       },
       {
         "name": "CTF Team",
