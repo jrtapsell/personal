@@ -8,9 +8,9 @@ const EXTERNAL = {
   "siteMap": require("gulp-sitemap"),
   "serviceWorker": require("sw-precache"),
   "imageMin": require("gulp-imagemin"),
-  "uglify": require('gulp-uglify'),
-  "delete": require('del'),
-  "myhelpers": require('./handlebars/helpers')
+  "uglify": require("gulp-uglify"),
+  "delete": require("del"),
+  "myhelpers": require("./handlebars/helpers")
 };
 
 
@@ -80,7 +80,7 @@ function compileDirectory(sourceDirectory) {
 }
 
 defineTask("pages", function () {
-  return compileDirectory("src/hbs/pages/*.hbs")
+  return compileDirectory("src/hbs/pages/*.hbs");
 });
 
 /**
@@ -122,7 +122,7 @@ defineTask("sitemap", function () {
 });
 
 defineTask("ghostPages", function () {
-  return compileDirectory("src/hbs/extra/*.hbs")
+  return compileDirectory("src/hbs/extra/*.hbs");
 });
 
 /**

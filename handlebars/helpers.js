@@ -5,13 +5,13 @@ const EXTERNAL = {
 };
 
 const classMap = {
-  table: 'mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col'
+  table: "mdl-data-table mdl-js-data-table mdl-cell mdl-cell--12-col"
 };
 
 const bindings = Object.keys(classMap)
-  .map(key => ({
-    type: 'output',
-    regex: new RegExp(`<${key}>`, 'g'),
+  .map((key) => ({
+    type: "output",
+    regex: new RegExp(`<${key}>`, "g"),
     replace: `<${key} class="${classMap[key]}">`
   }));
 
@@ -27,7 +27,7 @@ function safeString(unsafe) {
 
 function wrap(prefix, suffix) {
   return function wrapped(input) {
-    return safeString(prefix + input + suffix)
+    return safeString(prefix + input + suffix);
   }
 }
 
