@@ -21,10 +21,13 @@ function defineTask(name, action) {
   ALL_TASKS.push(name);
 }
 
-
+/**
+ * Deletes the old pages.
+ */
 defineTask("clean", function () {
   return EXTERNAL.delete("dist");
 });
+
 /**
  * Optimises the CSS
  */
@@ -60,10 +63,6 @@ defineTask("font", function () {
     .pipe(EXTERNAL.gulp.dest("dist/res/min-font"));
 });
 
-/**
- * Creates all of the site pages
- */
-
 function compileDirectory(sourceDirectory) {
   return EXTERNAL.gulp.src(sourceDirectory)
     .pipe(EXTERNAL.handlebars(null, {
@@ -79,6 +78,10 @@ function compileDirectory(sourceDirectory) {
     .pipe(EXTERNAL.gulp.dest("dist"));
 }
 
+
+/**
+ * Creates all of the site pages
+ */
 defineTask("pages", function () {
   return compileDirectory("src/hbs/pages/*.hbs");
 });
@@ -121,6 +124,9 @@ defineTask("sitemap", function () {
     .pipe(EXTERNAL.gulp.dest("./dist"));
 });
 
+/**
+ * Creates pages that shouldn't be in the sitemap, like the 404 page.
+ */
 defineTask("ghostPages", function () {
   return compileDirectory("src/hbs/extra/*.hbs");
 });
