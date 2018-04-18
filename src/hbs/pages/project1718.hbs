@@ -1,12 +1,19 @@
 {{#*inline "single_content"}}
-
-<h2>Abstract</h2>
-
+{{#markdown}}
+## Abstract
 A lot of applications are now signed to prevent tampering with them, this usually consists of a created executable that is signed by the company or group releasing some software, allowing the end user or their system to verify the source of the software. The signature usually covers the executable code, but also the meta-data, and the resource files, allowing prompts to show who signed a piece of software, and stopping manipulating the resource files to, for example, swap out error messages for security issues with benign looking messages.
 
 For some classes of software (device drivers on windows for example), this is a mandatory step, as 64 bit editions need settings changes to allow the use of unsigned drivers. This was introduced to try to prevent malware from getting deep into the system, as once it is at such a layer not only does it have the ability to take over the system, but also hides itself from any software looking for it.
 
 Unfortunately this is just moving the insertion of malicious payloads to before the signature, This kind of attack generally works by injecting malicious code into the repositories used to build the executables that are then signed for release holding their payload.
+
+## Project Aims
+
+- Developers should not need to install new software on their own devices if possible (although this may be necessary in some cases, this should be avoided if possible).
+- The releases are signed in such a way that end user devices can be sure who committed and released an application, and there should be no breaks in the chain of custody of the source or artefacts created from it.
+- The releases should not be able to be tampered with in an undetectable way.
+- It should not be possible to include an entity (person, group or company) in the list of people who released an application without their permission.
+{{/markdown}}
 <h2>Final report</h2>
 {{pdf "https://www.jrtapsell.co.uk/fyp_18_final_report.pdf"}}
 <h2>Interim report</h2>
