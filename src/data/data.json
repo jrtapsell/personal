@@ -48,6 +48,13 @@
     "name": "Projects",
     "children": [
       {
+        "name": "Third Year Project",
+        "url": "project1718.html",
+        "icon": "img/rhul.jpg",
+        "description": "My third year project",
+        "backing": "#202A30"
+      },
+      {
         "name": "UROP (Summer 2016)",
         "url": "urop-2016.html",
         "icon": "img/rhul.jpg",

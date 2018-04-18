@@ -1,0 +1,32 @@
+{{#*inline "single_content"}}
+
+<h2>Abstract</h2>
+
+A lot of applications are now signed to prevent tampering with them, this usually consists of a created executable that is signed by the company or group releasing some software, allowing the end user or their system to verify the source of the software. The signature usually covers the executable code, but also the meta-data, and the resource files, allowing prompts to show who signed a piece of software, and stopping manipulating the resource files to, for example, swap out error messages for security issues with benign looking messages.
+
+For some classes of software (device drivers on windows for example), this is a mandatory step, as 64 bit editions need settings changes to allow the use of unsigned drivers. This was introduced to try to prevent malware from getting deep into the system, as once it is at such a layer not only does it have the ability to take over the system, but also hides itself from any software looking for it.
+
+Unfortunately this is just moving the insertion of malicious payloads to before the signature, This kind of attack generally works by injecting malicious code into the repositories used to build the executables that are then signed for release holding their payload.
+<h2>Final report</h2>
+{{pdf "https://www.jrtapsell.co.uk/fyp_18_final_report.pdf"}}
+<h2>Interim report</h2>
+{{pdf "https://www.jrtapsell.co.uk/fyp_18_interim_report.pdf"}}
+<h2>Project Plan</h2>
+{{pdf "https://www.jrtapsell.co.uk/fyp_18_plan.pdf"}}
+<h2>Project Poster</h2>
+{{pdf "https://www.jrtapsell.co.uk/fyp_18_poster.pdf"}}
+<h2>Project Presentation</h2>
+{{pdf "https://www.jrtapsell.co.uk/fyp_18_presentation.pdf"}}
+
+
+
+{{button_bar '[
+    ["Main Repo", "https://github.com/jrtapsell/android_app_verifier"]
+]'
+}}
+{{/inline}}
+{{> layout/single
+        title_short="Third year project"
+        title="Third year project | James Tapsell"
+        description="Information about my third year project | James Tapsell"
+        url="https://www.jrtapsell.co.uk/project1718.html"}}
