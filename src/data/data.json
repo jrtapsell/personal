@@ -3,10 +3,10 @@
     "name": "Events",
     "children": [
       {
-        "name": "Google Scholar",
+        "name": "Google Scholarship 2018",
         "url": "google-scholarship-2018.html",
         "icon": "img/google.svg",
-        "description": "Google Scholarship 2018",
+        "description": "Being accepted for one of the Google Scholarships for 2018",
         "backing": "#eee"
       },
       {
