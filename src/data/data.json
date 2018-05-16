@@ -3,6 +3,13 @@
     "name": "Events",
     "children": [
       {
+        "name": "Google Scholar",
+        "url": "google-scholarship-2018.html",
+        "icon": "img/google.svg",
+        "description": "Google Scholarship 2018",
+        "backing": "#eee"
+      },
+      {
         "name": "Inter-ACE 2018",
         "url": "interace-2018.html",
         "icon": "img/interace.png",
