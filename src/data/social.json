@@ -29,9 +29,9 @@
         "header": "true",
         "username": "jrtapsell"
 }, {
-        "name": "Twitter",
-        "url": "https://www.twitter.com/jrtapsell",
-        "icon": "twitter",
+        "name": "Skype",
+        "url": "skype:jrtapsell?chat",
+        "icon": "skype",
         "header": "true",
         "username": "jrtapsell"
 }, {
@@ -43,13 +43,32 @@
 }, {
         "name": "ORCID",
         "url": "https://orcid.org/0000-0002-1213-3375",
-        "username": "0000-0002-1213-3375"
+        "username": "0000-0002-1213-3375",
+        "icon": "orcid"
 }, {
         "name": "ResearcherID",
         "url": "https://www.researcherid.com/rid/S-3593-2017",
-        "username": "S-3593-2017"
+        "username": "S-3593-2017",
+        "icon": "researcherid"
+}, {
+        "name": "Twitter",
+        "url": "https://www.twitter.com/jrtapsell",
+        "icon": "twitter",
+        "header": "true",
+        "username": "jrtapsell"
 }, {
         "name": "arXiv",
         "url": "https://arxiv.org/a/tapsell_j_1",
-        "username": "jrtapsell"
+        "username": "jrtapsell",
+        "icon": "arxiv"
+}, {
+        "name": "Google Scholar",
+        "url": "https://scholar.google.co.uk/citations?user=msKBmCkAAAAJ&hl=en",
+        "username": "jrtapsell",
+        "icon": "google-scholar"
+}, {
+        "name": "Google Plus",
+        "url": "https://plus.google.com/u/0/102128684362106358938",
+        "username": "jrtapsell",
+        "icon": "googleplus"
 }]

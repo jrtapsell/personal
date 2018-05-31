@@ -173,3 +173,7 @@ pre {
 .min-100 {
     min-width: 100px;
 }
+
+.triple-size {
+    font-size: 3em;
+}

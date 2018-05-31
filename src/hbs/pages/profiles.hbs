@@ -3,6 +3,7 @@ A list of my active accounts.
 {{#load_file "social.json"}}
         <table class="mdl-data-table mdl-cell mdl-cell--12-col">
             <tr>
+                <th></th>
                 <th>
                     Account
                 </th>
@@ -12,6 +13,7 @@ A list of my active accounts.
             </tr>
             {{#each this}}
                 <tr>
+                    <td>{{#if icon}}<i class="triple-size icon-{{icon}}" aria-hidden="true"></i>{{/if}}</td>
                     <td>{{name}}</td>
                     <td><a href="{{url}}" rel="me"><button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Open</button></a></td>
                 </tr>

@@ -10,7 +10,8 @@ const EXTERNAL = {
   "imageMin": require("gulp-imagemin"),
   "uglify": require("gulp-uglify"),
   "delete": require("del"),
-  "myhelpers": require("./handlebars/helpers")
+  "myhelpers": require("./handlebars/helpers"),
+  "fontello": require("gulp-fontello")
 };
 
 
@@ -101,6 +102,15 @@ defineTask("mdl-css", function () {
 defineTask("manifest", function () {
   return EXTERNAL.gulp.src("src/manifest/manifest.json")
     .pipe(EXTERNAL.gulp.dest("dist"));
+});
+
+/**
+ * Builds the custom font
+ */
+defineTask("makeFont", function () {
+  return EXTERNAL.gulp.src("no-inc/config.json")
+      .pipe(EXTERNAL.fontello())
+      .pipe(EXTERNAL.gulp.dest("./dist/res/min-font"))
 });
 
 /**
