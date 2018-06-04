@@ -54,17 +54,17 @@
         "name": "Twitter",
         "url": "https://www.twitter.com/jrtapsell",
         "icon": "twitter",
-        "header": "true",
+        "header": "false",
         "username": "jrtapsell"
 }, {
         "name": "arXiv",
         "url": "https://arxiv.org/a/tapsell_j_1",
-        "username": "jrtapsell",
+        "username": "tapsell_j_1",
         "icon": "arxiv"
 }, {
         "name": "Google Scholar",
         "url": "https://scholar.google.co.uk/citations?user=msKBmCkAAAAJ&hl=en",
-        "username": "jrtapsell",
+        "username": "msKBmCkAAAAJ",
         "icon": "google-scholar"
 }, {
         "name": "Google Plus",

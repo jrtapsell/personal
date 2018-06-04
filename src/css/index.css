@@ -177,3 +177,9 @@ pre {
 .triple-size {
     font-size: 3em;
 }
+
+.card-icon {
+    text-align: center;
+    width: 100%;
+    font-size: 100px;
+}
