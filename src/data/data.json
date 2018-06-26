@@ -62,10 +62,17 @@
         "backing": "#202A30"
       },
       {
+        "name": "Internship (Summer 2018)",
+        "icon": "img/scc.png",
+        "description": "Data Provenance for Multi-Database Servers Enterprise Architecture",
+        "backing": "#CCCCCC",
+        "url": "intern-2018.html"
+      },
+      {
         "name": "UROP (Summer 2017)",
-        "icon": "img/rhul.jpg",
+        "icon": "img/scc.png",
         "description": "Blockchain to provide Data Provenance Integrity and Privacy",
-        "backing": "#202A30",
+        "backing": "#CCCCCC",
         "url": "urop-2017-bc.html"
       },
       {
