@@ -127,6 +127,11 @@
         "backing": "#1e4a32"
       },
       {
+        "name": "Papers",
+        "url": "papers.html",
+        "description": "My papers"
+      },
+      {
         "name": "Profiles",
         "url": "profiles.html",
         "description": "All my profiles"

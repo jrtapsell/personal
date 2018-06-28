@@ -1,0 +1,19 @@
+{{#*inline "single_content"}}
+    {{#load_file "papers.json"}}
+    {{#each this}}
+        <h2>{{title}}</h2>
+        <h3>{{authors}}</h3>
+        <em>{{conference}}</em>
+        <div>
+            {{#each links}}
+                    <a href="{{link}}">{{text}}</a>
+            {{/each}}
+        </div>
+    {{/each}}
+    {{/load_file}}
+{{/inline}}
+{{> layout/single
+        title_short = "Papers"
+        title="Papers | James Tapsell"
+        description="A list of all of the papers I have written"
+        url="https://www.jrtapsell.co.uk/papers.html"}}

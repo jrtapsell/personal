@@ -144,10 +144,8 @@ pre {
     .mdl-card.mdl-shadow--2dp.mdl-cell.mdl-cell--4-col.link-card {
         page-break-inside: avoid;
     }
-
-    footer {
-        display: none;
-    }
+    * {-webkit-print-color-adjust:exact;}
+    iframe { display: none; }
 
 }
 
