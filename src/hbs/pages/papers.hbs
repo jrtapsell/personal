@@ -4,9 +4,9 @@
         <h2>{{title}}</h2>
         <h3>{{authors}}</h3>
         <em>{{conference}}</em>
-        <div>
+        <div class="button-bar">
             {{#each links}}
-                    <a href="{{link}}">{{text}}</a>
+                {{button url=link text=text}}
             {{/each}}
         </div>
     {{/each}}
