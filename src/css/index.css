@@ -152,6 +152,7 @@ pre {
 .button-bar {
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .mdl-mini-footer--link-list a, .mdl-mini-footer__link-list a {
@@ -185,6 +186,7 @@ pre {
 
 .button-link {
     flex-grow: 2;
+    margin-bottom: 1em;
 }
 
 .button-body {
