@@ -3,7 +3,7 @@
     {{#each this}}
         <h2>{{title}}</h2>
         <h3>{{authors}}</h3>
-        <em>{{conference}}</em>
+        <a href="{{conferenceLink}}"><em>{{conference}}</em></a>
         <div class="button-bar">
             {{#each links}}
                 {{button url=link text=text}}
