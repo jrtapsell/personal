@@ -72,9 +72,9 @@ const helpers = {
   "load_file": withJsonFile,
   "markdown": (body) => safeString(converter.makeHtml(body.fn())),
   "toId": (body) => safeString(body.toLowerCase().replace(" ", "_")),
-  "youtube": wrap("<iframe src=\"https://www.youtube.com/embed/", "\" frameborder=\"0\" allowfullscreen></iframe>"),
-  "vimeo": wrap("<iframe src=\"https://player.vimeo.com/video/", "\" frameborder=\"0\" allowfullscreen></iframe>"),
-  "pdf": wrap("<iframe src=\"https://docs.google.com/gview?url=", "&embedded=true\" frameborder=\"0\"></iframe>"),
+  "youtube": wrap("<iframe src=\"https://www.youtube.com/embed/", "\" frameborder=\"0\" allowfullscreen allow=\"fullscreen\"></iframe>"),
+  "vimeo": wrap("<iframe src=\"https://player.vimeo.com/video/", "\" frameborder=\"0\" allowfullscreen allow=\"fullscreen\"></iframe>"),
+  "pdf": wrap("<iframe src=\"https://docs.google.com/gview?url=", "&embedded=true\" frameborder=\"0\" allow=\"fullscreen\"></iframe>"),
   "button_bar": buttonBar,
   "button": button
 };
