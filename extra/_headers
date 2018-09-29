@@ -6,7 +6,7 @@
     x-content-type-options: nosniff
     x-frame-options: DENY
     x-xss-protection: 1; mode=block
-    Expect-CT: max-age=0, report-uri="https://jrtapsell.report-uri.com/r/d/ct/reportOnly"
-
+    Expect-CT:max-age=0, report-uri="https://jrtapsell.report-uri.com/r/d/ct/reportOnly"
+    Feature-Policy: accelerometer 'none';ambient-light-sensor 'none';autoplay 'none';camera 'none';encrypted-media 'none';fullscreen 'none';geolocation 'none';gyroscope 'none';magnetometer 'none';microphone 'none';midi 'none';payment 'none';picture-in-picture 'none';speaker 'none';usb 'none';vr 'none';
 /img/*
     Cache-Control: public, max-age=31536000
